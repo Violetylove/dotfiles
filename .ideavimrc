@@ -22,14 +22,11 @@ set number
 set relativenumber	" 显示相对行号
 set incsearch       " 实时开启搜索高亮
 set hlsearch		" 搜索结果高亮
-set smartcase           " 开启智能大小写查找
 set encoding=utf-8      " Use UTF-8.
 set smartcase           " 设置智能大小写
 " 设置没有声音
 set noerrorbells
 set novisualbell
-" 总是显示状态栏
-"set laststatus=2
 
 " ==========================================================================================================
 "                              ============== 键位设置 ===================

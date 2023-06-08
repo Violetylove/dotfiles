@@ -10,8 +10,7 @@ set backspace=indent,eol,start
 " 设置python支持
 "let g:python3_host_prog = 'C:/Users/23879/AppData/Local/Microsoft/WindowsApps/python3.exe'
 set number  		" 显示行号
-"set foldmethod=indent   "使用引导折叠
-set relativenumber	" 显示相对行号  看着别扭
+set relativenumber	" 显示相对行号
 set incsearch       " 实时开启搜索高亮
 set hlsearch		" 搜索结果高亮
 set autoindent		" 自动缩进
@@ -19,10 +18,8 @@ set smartindent		" 智能缩进
 set shiftwidth=4	" 设置自动缩进宽度为4
 set smartcase           " 开启智能大小写查找
 set encoding=utf-8      " Use UTF-8.
-set showcmd             " Display incomplete commands.
 set clipboard=unnamedplus " 开启系统剪切板
 set cursorline          " 高亮当前行
-set smartcase           " 设置智能大小写
 syntax on
 colorscheme gruvbox
 
