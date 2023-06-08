@@ -2,6 +2,12 @@
 
 - 本仓库存放vim配置文件
 
+- 由于Vim和Neovim的配置文件内容可以通用，只放置了Neovim的配置文件``init.vim``
+
+- ``.ideavimrc``是IDEA中Vim插件的配置文件
+
+  
+
 ## 目录构成
 
 ### 一、Vim

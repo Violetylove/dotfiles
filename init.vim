@@ -47,7 +47,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 " 快速注释
 Plug 'tpope/vim-commentary'
-" 调试器
 
 call plug#end()
 
