@@ -37,9 +37,6 @@ set novisualbell
 let mapleader=","
 " 进入 normal模式
 inoremap jk <Esc>
-" 保存
-inoremap <leader>w <Esc>:w<cr>
-nnoremap <leader>w :w<cr>
 " 退出
 inoremap <leader>q <Esc>:q<CR>
 nnoremap <leader>q :q<CR>
