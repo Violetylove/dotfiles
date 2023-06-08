@@ -38,21 +38,31 @@ let mapleader=","
 " 进入 normal模式
 inoremap jk <Esc>
 " 退出
-inoremap <leader>q <Esc>:q<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <space>q :qa<CR>
 " 窗口切换
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+" 分割窗口
+noremap <leader>s <C-w>s
+noremap <leader>v <C-w>v
 " 跳至行尾
 nnoremap ; $
 " 行内删除
 nnoremap dl d$
 nnoremap df d^
+" 去除搜索后高亮
+nnoremap <space>nl :nohl<CR>
 
 " action
-noremap <leader>r :action Run<CR>
-noremap <leader>dd :action Debug<CR>
-noremap <leader>b :action ToggleLineBreakpoint<CR>
-noremap <leader>d :action GotoDeclaration<CR>
+nnoremap <space>r :action Run<CR>
+nnoremap <space>db :action Debug<CR>
+nnoremap <space>b :action ToggleLineBreakpoint<CR>
+nnoremap <space>d :action GotoDeclaration<CR>
+" 跳转到错误
+nnoremap g[ :action GotoNextError<CR>
+nnoremap g] :action GotoPreviousError<CR>
+" 格式化代码
+nnoremap <space>c :action ReformatCode<CR>

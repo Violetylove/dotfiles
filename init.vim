@@ -47,6 +47,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 " 快速注释
 Plug 'tpope/vim-commentary'
+" 调试器
 
 call plug#end()
 
@@ -132,10 +133,9 @@ let mapleader=","
 inoremap jk <Esc> 
 " 保存
 inoremap <leader>w <Esc>:w<cr>
-nnoremap <leader>w :w<cr>
 " 退出
-inoremap <leader>q <Esc>:q<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <space>q :qa<CR>
 " 窗口切换
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -146,11 +146,16 @@ nnoremap <space>h :vertical resize +5<CR>
 nnoremap <space>l :vertical resize -5<CR> 
 nnoremap <space>k :resize +5<CR> 
 nnoremap <space>j :resize +5<CR> 
+" 分割窗口
+noremap <leader>s <C-w>s
+noremap <leader>v <C-w>v
 " 跳至行尾
 nnoremap ; $
 " 行内删除
 nnoremap dl d$
 nnoremap df d^
+" 去除搜索后高亮
+nnoremap <space>nl :nohl<CR>
 " buffer切换
 inoremap <leader>ne <Esc>:bnext<CR>
 inoremap <leader>pr <Esc>:bprevious<CR>
