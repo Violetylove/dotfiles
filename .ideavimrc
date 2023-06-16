@@ -27,7 +27,7 @@ set keep-english-in-normal
 " ==========================================================================================================
 set clipboard+=unnamed
 set number
-set laststatus=2
+
 " 显示相对行号
 set relativenumber
 " 实时开启搜索高亮
@@ -46,7 +46,7 @@ set visualbell
 " ==========================================================================================================
 "                              ============== 键位设置 ===================
 " ==========================================================================================================
-let mapleader=","
+let mapleader=" "
 " 进入 normal模式
 inoremap jk <Esc>
 " 退出
@@ -69,8 +69,6 @@ nnoremap df d^
 nnoremap <space>nl :nohl<CR>
 
 " action
-nnoremap <leader>r :action Run<CR>
-nnoremap <leader>de :action Debug<CR>
 nnoremap <space>b :action ToggleLineBreakpoint<CR>
 nnoremap <space>d :action GotoDeclaration<CR>
 " 跳转到错误
