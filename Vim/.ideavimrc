@@ -20,7 +20,7 @@ nmap ss <Plug>(easymotion-s2)
 " 设置保持英文输入法
 set keep-english-in-normal
 " 打开文件树
-"nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <Space>e :NERDTree<CR>
 
 " ==========================================================================================================
 "                          ================= 基础设置 =====================
@@ -51,7 +51,6 @@ let mapleader=" "
 inoremap jk <Esc>
 " 退出
 nnoremap <leader>q :q<CR>
-nnoremap <space>q :qa<CR>
 " 窗口切换
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -66,18 +65,17 @@ nnoremap ; $
 nnoremap dl d$
 nnoremap df d^
 " 去除搜索后高亮
-nnoremap <space>nl :nohl<CR>
+nnoremap <leader>nl :nohl<CR>
 
 " action
-nnoremap <space>b :action ToggleLineBreakpoint<CR>
-nnoremap <space>d :action GotoDeclaration<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
 " 跳转到错误
 nnoremap g[ :action GotoNextError<CR>
 nnoremap g] :action GotoPreviousError<CR>
 " 格式化代码
-nnoremap <space>c :action ReformatCode<CR>
+nnoremap <leader>c :action ReformatCode<CR>
 " 重命名
-nnoremap <space>rn :action RenameElement<CR>
+nnoremap <leader>rn :action RenameElement<CR>
 
 " sethandler
 sethandler <C-2> a:ide
@@ -88,7 +86,7 @@ sethandler <C-;> a:vim
 sethandler <C-S-;> a:vim
 sethandler <C-A> a:ide
 sethandler <C-B> a:vim
-sethandler <C-C> a:vim
+sethandler <C-C> a:ide
 sethandler <C-D> a:vim
 sethandler <C-E> a:vim
 sethandler <C-F> a:vim
@@ -101,13 +99,13 @@ sethandler <C-L> a:vim
 sethandler <C-M> a:ide
 sethandler <C-N> a:vim
 sethandler <C-O> a:vim
-sethandler <C-P> a:vim
+sethandler <C-P> a:ide
 sethandler <C-Q> a:ide
 sethandler <C-R> a:vim
 sethandler <C-S> a:vim
 sethandler <C-T> a:vim
 sethandler <C-U> a:vim
-sethandler <C-V> a:vim
+sethandler <C-V> a:ide
 sethandler <C-W> a:vim
-sethandler <C-X> a:vim
+sethandler <C-X> a:ide
 sethandler <C-Y> a:ide

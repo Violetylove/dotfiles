@@ -1,42 +1,127 @@
-## 介绍
+# Winter Things
 
-- 本仓库存放vim配置文件
+### 介绍
 
-- 由于Vim和Neovim的配置文件内容可以通用，只放置了Neovim的配置文件``init.vim``
+- 创建此仓库是为了保存一些应用程序的配置文件。
+- 各个文件夹放置的就是其配置文件。
+- 有问题可联系我。
+  - [`哔哩哔哩`](https://space.bilibili.com/200569093)
 
-- ``.ideavimrc``是IDEA中Vim插件的配置文件
+### Windows系统的工具
 
+- `Windows Terminal`和`Power Shell`
+  
+  - Win10/11自带`cmd`和`Windows Power Shell`,但不是我们想要的。我们需要到微软商店`Microsoft Stor`自行下载`Windows Terminal`和`Power Shell`。
+  
+  - **碎碎念：**对于Windows，我们平时所说的终端就是`Windows Terminal`。
+  
+  - `Windows Terminal`和`Power Shell`的基本配置和操作方法不在此赘述，要讲的是`Power Shell`的配置文件。
+  
+    - 配置文件可在终端输入``$PROFILE``查看。
+  
+    - 我们可以在配置文件中定义命令的别名：
+  
+      ```shell
+      # 不带参数的命令可以使用Set-Alias。-Name为别名命令，-Value为原命令
+      # musicfox
+      Set-Alias -Name wyy -Value musicfox
+      
+      # 带参数的命令或者有空格的命令，可以使用函数function
+      # 启动komorebic
+      function kost {
+          komorebic start
+      }
+      ```
+  
+- 包管理器 [`Scoop`](https://gitee.com/glsnames/scoop-installer)
+  
+  - 国内网络问题，需要使用代理或者换源。上述链接就是gitee上一个镜像仓库的项目地址。
+  
+  - 如果想修改它的路径，可以定义两个环境变量：
+  
+    ```shel
+    #等号左边是变量名，等号右边是变量值。需要到环境变量设置。
+    SCOOP=D:\WorkSoftware\scoop
+    SCOOP_GLOBAL=D:\WorkSpace\scoop
+    ```
+  
+- 全局搜索[`Wox`](https://github.com/Wox-launcher/Wox)和`Everything`
+
+  - `Wox`的默认打开快捷键是``Alt+Space``。
+  
+- 全局热键 [`whkd`](https://github.com/LGUG2Z/whkd)
+
+  - 配置文件`whkdrc`放到`~/.config`路径下。
+  - **省流：**可在终端``scoop install whkd``安装。
+
+- 窗口管理器[`komorebi`](https://github.com/LGUG2Z/komorebi)
+  
+  - 这个就比较生猛了，配置文件`komorebi.generated.ps1`,`komorebi.ps1`放置在`~`目录下。
+  
+    - 当然，我推荐修改路径，使其更易管理。定义一个环境变量：
+  
+      ```shell
+       # 在Power Shell的配置文件$PROFILE加入这句
+       $Env:KOMOREBI_CONFIG_HOME = '~/.config/komorebi'
+      ```
+  
+      此时我们的默认路径就变成了``~/.config/komorebi``。
+  
+  - 这个应用只负责管理窗口，热键绑定需要依靠上面的`whkd`或者[`AutoHotKey`](https://www.autohotkey.com/)。二者的区别在于，`whkd`是仅仅一个热键应用，但`AutoHotKey`是一种脚本语言，可以实现Windows下的按键和命令。
+  
+  - 我用的是`whkd`，比较简洁。
+  
+  - **省流：**可在终端``scoop install komorebi``安装
+  
+- 状态栏[`yasb`](https://github.com/denBot/yasb)
+  
+  - 克隆项目到本地，配置文件`config.yaml`,`styles.css`放置到`~/.yasb`；
+  
+  - 安装依赖，终端执行``pip install -r requirements.txt``；
+  
+  - 我刚开始用的是Python3.11，报了好多错误。后来改用Python3.9一下子就弄好了；
+  
+  - 最后运行``python src/main.py``。
+  
+  - **(推荐)**将该文件`main.py`的后缀改为`pyw`，并用`pythonw.exe`程序运行，可以达到后台运行的效果。
+  
+    - **(最最推荐)**但主程序放置在文件夹中，不方便打开。我们又将文件名设置成一个容易被`Wox`搜索的名字，比如`ya.st.pyw`，至此我们很快打开它。
+  
+  - 可在`Power Shell`的配置文件`$PROFILE`中添加别名函数，以更快捷地关闭它。
+  
+    ```shell
+    # 添加函数yasp,意为yasb stop
+    function{
+    	# 由于yasb没有提供终端开启或关闭的方法，我们只能杀死pythonw.exe进程。
+    	# 注意：要去任务管理器查看实际的进程名称，并修改下面的pythonw3.9.exe,否则该命令无效。
+    	taskkill /f /im pythonw3.9.exe
+    }
+    ```
+  
+    
+  
+- 终端音乐播放器[`musicfox`](https://github.com/go-musicfox/go-musicfox)
+
+  - **省流：**终端下载
+
+    ```shell
+    scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git
+    
+    scoop install go-musicfox
+    ```
+
+- 终端ASCII艺术字[`figlet-cli`](https://github.com/patorjk/figlet.js)
+  - `` npm install -g figlet-cli``，`npm`是[`Node.js`](https://nodejs.org/en)自带的下载器
+  
+  - 使用方法是输入命令``figlet String``，则可以在终端打印`String`的ASCII艺术字。
   
 
-## 目录构成
-
-### 一、Vim
-
-- Vim默认将资源文件放置在``~/.vim``下，而配置文件为``~/.vimrc``。
-- 使用插件管理器vim-plug时，去官网下载plug.vim文件。Linux系统放置到``~/.vim/autoload``目录下，Windows系统放置到``~/vimfile/autoload``目录下。
-- Linux在``~/.vim``下，创建``plugged``目录存放插件，创建``colors``目录存放配色方案的vim文件。
-- Windows在``~/vimfile``下，创建``plugged``目录存放插件，创建``colors``目录存放配色方案的vim文件。
-- 另，Windows的``~``目录为``C:\Users\用户名``。
 
 
+### 浏览器插件
 
-### 二、Neovim
+- Vimium C
+- 青柠起始页
+  - [官网](https://limestart.cn/)
 
-- Neovim，简称为nvim
-- Linux，所有文件，包括配置文件``init.vim``应放置在``~/.config/nvim``目录下。
-- Windows，所有文件，包括配置文件``init.vim``应放置在``C:\Users\用户名\AppData\Local\nvim``目录下。
-- ``nvim``目录下应包括目录``plugged``,``colors``，文件``init.vim``。
-- 使用插件管理器vim-plug时，去官网下载plug.vim文件。放置到``nvim/autoload``目录下。
-
-
-
-## Windows事项
-
-- 我们知道Windows对Neovim的默认配置路径是``C:\Users\用户名\AppData\Local\nvim``，这极不利于我们管理。路径不好找，而且很长。所以，我们可以修改环境变量，设置默认的配置路径。
-- 我们添加两个环境变量，将路径设为自己想要的，比如我的：``D:\Global Config``。那么应配置：
-
-```she
-XDG_CONFIG_HOME=D:\Global Config
-XDG_DATA_HOME=D:\Global Config
-```
-- 这样，我们的nvim的最终路径变成了``D:\Global Config\nvim``。
+ 
