@@ -50,7 +50,7 @@ function whst { Start-Process whkd -WindowStyle hidden }
 function whsp { taskkill /f /im whkd.exe }
 
 ########################################################
-######################## whkd ##########################
+######################## yasb ##########################
 ########################################################
 # 启动
 function yast { D:\WorkSoftware\yasb\src\ya.st.pyw }
