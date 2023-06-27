@@ -28,18 +28,28 @@ Set-Alias -Name wyy -Value musicfox
 
 # komorebic
 # 启动
-function kost {
-    komorebic start
-}
+function kost { komorebic start }
 # 停止
- function kosp {
-    komorebic stop
- }
- # 设置路径
- $Env:KOMOREBI_CONFIG_HOME = '~/.config/komorebi'
+ function kosp { komorebic stop }
+# 设置路径 
+# 注意，必须写绝对路径，不能用 ~ 代替用户目录。Windows真烦
+$Env:KOMOREBI_CONFIG_HOME = 'C:\Users\23879\.config\komorebi'
+
+# whkd 
+# 理论上，komorebi启动时，whkd回启动。但以防万一，设置快捷的打开函数。
+function whst { Start-Process whkd -WindowStyle hidden }
 
 # yasb
 # 停止
-function yasp {
-    taskkill /f /im pythonw3.9.exe
+function yasp { taskkill /f /im pythonw3.9.exe }
+
+# 心血来潮，写一个合并komorebi和yasb的启动命令
+function koyast{
+    kost && D:\WorkSoftware\yasb\src\ya.st.pyw
 }
+# 同样，关闭命令
+function koyasp {
+    kosp && yasp
+}
+# neovide
+Set-Alias -Name gvim -Value neovide
