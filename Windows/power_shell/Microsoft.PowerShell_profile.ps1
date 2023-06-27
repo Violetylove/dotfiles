@@ -59,7 +59,7 @@ function yasp { taskkill /f /im pythonw3.9.exe }
 
 # 同时启动komorebi和yasb的函数
 function koyast { kost && yast }
-# 同时关闭komorebi和yasb命令
+# 同时关闭komorebi和yasb的函数
 function koyasp { kosp && yasp }
 
 ########################################################
