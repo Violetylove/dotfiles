@@ -78,6 +78,15 @@
   
   - 克隆项目到本地，配置文件`config.yaml`,`styles.css`放置到`~\.yasb`；
   
+    - 又到最喜欢的路径环节了。在我翻翻查查文件时，看到了``src\settings.py``写的东西了。里面可以修改配置路径：
+  
+      ```python
+      # 修改这一句，将配置文件路径修改为 C:\Users\用户名\.config\yasb
+       DEFAULT_CONFIG_DIRECTORY = "C:\\Users\\用户名\\.config\\yasb"
+      ```
+  
+      
+  
   - 安装依赖，终端执行``pip install -r requirements.txt``；
   
   - 我刚开始用的是Python3.11，报了好多错误。后来改用Python3.9一下子就弄好了；
