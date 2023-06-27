@@ -15,31 +15,29 @@ komorebic cross-monitor-move-behaviour insert
 komorebic watch-configuration enable
 
 # Create named workspaces I-V on monitor 0
-# komorebic ensure-named-workspaces 0 I II III IV V
-komorebic ensure-named-workspaces A V M I
-# You can do the same thing for secondary monitors too
-# komorebic ensure-named-workspaces Aya Vio Mik Ish Alen E F
+komorebic ensure-named-workspaces 0 Ayanami Violet Mikasa
+# komorebic ensure-named-workspaces I II III IV V
+
+# 为工作空间设置名字
+komorebic workspace-name 0 0 Ayanami
+komorebic workspace-name 0 1 Violet
+komorebic workspace-name 0 2 Mikasa
 
 # Assign layouts to workspaces, possible values: bsp, columns, rows, vertical-stack, horizontal-stack, ultrawide-vertical-stack
 komorebic named-workspace-layout I bsp
 
-# Set the gaps around the edge of the screen for a workspace
 # 屏幕间距
-komorebic named-workspace-padding I 4
-# Set the gaps between the containers for a workspace
+komorebic workspace-padding 0 0 4
 # 窗口间距
-komorebic named-workspace-container-padding I 4
-
-# You can assign specific apps to named workspaces
-# komorebic named-workspace-rule exe "Firefox.exe" III
-
-# Configure the invisible border dimensions
-komorebic invisible-borders 7 0 14 7
+komorebic container-padding 0 0 4
 
 # Uncomment the next lines if you want a visual border around the active window
 komorebic active-window-border-colour 66 165 245 --window-kind single
 komorebic active-window-border-colour 256 165 66 --window-kind stack
 # komorebic active-window-border-colour 255 51 153 --window-kind monocle
 komorebic active-window-border enable
+
+# Configure the invisible border dimensions
+komorebic invisible-borders 1 0 1 1
 
 komorebic complete-configuration

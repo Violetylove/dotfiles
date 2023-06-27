@@ -51,7 +51,7 @@
   
 - 全局热键 [`whkd`](https://github.com/LGUG2Z/whkd)
 
-  - 配置文件`whkdrc`放到`~/.config`路径下。
+  - 配置文件`whkdrc`放到`~\.config`路径下。
   - **省流：**可在终端``scoop install whkd``安装。
 
 - 窗口管理器[`komorebi`](https://github.com/LGUG2Z/komorebi)
@@ -62,10 +62,11 @@
   
       ```shell
        # 在Power Shell的配置文件$PROFILE加入这句
-       $Env:KOMOREBI_CONFIG_HOME = '~/.config/komorebi'
+       # 千万别写成 ~\.config\komorebi,hui失效的
+       $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\用户名\.config\komorebi'
       ```
-  
-      此时我们的默认路径就变成了``~/.config/komorebi``。
+      
+      此时我们的默认路径就变成了``C:\Users\用户名\.config\komorebi``。
   
   - 这个应用只负责管理窗口，热键绑定需要依靠上面的`whkd`或者[`AutoHotKey`](https://www.autohotkey.com/)。二者的区别在于，`whkd`是仅仅一个热键应用，但`AutoHotKey`是一种脚本语言，可以实现Windows下的按键和命令。
   
@@ -75,13 +76,13 @@
   
 - 状态栏[`yasb`](https://github.com/denBot/yasb)
   
-  - 克隆项目到本地，配置文件`config.yaml`,`styles.css`放置到`~/.yasb`；
+  - 克隆项目到本地，配置文件`config.yaml`,`styles.css`放置到`~\.yasb`；
   
   - 安装依赖，终端执行``pip install -r requirements.txt``；
   
   - 我刚开始用的是Python3.11，报了好多错误。后来改用Python3.9一下子就弄好了；
   
-  - 最后运行``python src/main.py``。
+  - 最后运行``python src\main.py``。
   
   - **(推荐)**将该文件`main.py`的后缀改为`pyw`，并用`pythonw.exe`程序运行，可以达到后台运行的效果。
   
@@ -123,5 +124,3 @@
 - Vimium C
 - 青柠起始页
   - [官网](https://limestart.cn/)
-
- 
