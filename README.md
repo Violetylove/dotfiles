@@ -11,7 +11,7 @@
 
 - `Windows Terminal`和`Power Shell`
   
-  - Win10/11自带`cmd`和`Windows Power Shell`,但不是我们想要的。我们需要到微软商店`Microsoft Store`自行下载`Windows Terminal`和`Power Shell`。
+  - Win10/11自带`cmd`和`Windows Power Shell`,但它们不是我们想要的。我们需要到微软商店`Microsoft Store`自行下载`Windows Terminal`和`Power Shell`。
   
   - **碎碎念：**对于Windows，我们平时所说的终端就是`Windows Terminal`。
   
@@ -62,7 +62,7 @@
   
       ```shell
        # 在Power Shell的配置文件$PROFILE加入这句
-       # 千万别写成 ~\.config\komorebi,hui失效的
+       # 千万别写成 ~\.config\komorebi,会失效的
        $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\用户名\.config\komorebi'
       ```
       
