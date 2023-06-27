@@ -1,3 +1,11 @@
+
+# Wirten by Winter Yuan.
+# __        ___       _             __   __
+# \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
+#  \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
+#   \ V  V / | | | | | ||  __/ |      | || |_| | (_| | | | |
+#    \_/\_/  |_|_| |_|\__\___|_|      |_| \__,_|\__,_|_| |_|
+
 if (!(Get-Process whkd -ErrorAction SilentlyContinue))
 {
     Start-Process whkd -WindowStyle hidden

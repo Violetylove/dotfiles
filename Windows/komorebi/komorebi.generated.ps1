@@ -1,4 +1,11 @@
 
+# Wirten by Winter Yuan.
+# __        ___       _             __   __
+# \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
+#  \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
+#   \ V  V / | | | | | ||  __/ |      | || |_| | (_| | | | |
+#    \_/\_/  |_|_| |_|\__\___|_|      |_| \__,_|\__,_|_| |_|
+
 # CCleaner
 komorebic.exe manage-rule exe CCleaner64.exe
 
@@ -9,9 +16,6 @@ komorebic.exe identify-tray-application exe "ElectronMail.exe"
 # Google Chrome
 # If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
 komorebic.exe identify-tray-application exe "chrome.exe"
-
-# Google Drive
-komorebic.exe float-rule exe "GoogleDriveFS.exe"
 
 # IntelliJ IDEA
 komorebic.exe identify-object-name-change-application exe "idea64.exe"
