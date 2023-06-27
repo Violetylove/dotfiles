@@ -11,7 +11,7 @@
 
 - `Windows Terminal`和`Power Shell`
   
-  - Win10/11自带`cmd`和`Windows Power Shell`,但不是我们想要的。我们需要到微软商店`Microsoft Stor`自行下载`Windows Terminal`和`Power Shell`。
+  - Win10/11自带`cmd`和`Windows Power Shell`,但不是我们想要的。我们需要到微软商店`Microsoft Store`自行下载`Windows Terminal`和`Power Shell`。
   
   - **碎碎念：**对于Windows，我们平时所说的终端就是`Windows Terminal`。
   
