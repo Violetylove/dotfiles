@@ -1,5 +1,5 @@
 
-# Writen by Winter Yuan.
+# Wirten by Winter Yuan.
 # __        ___       _             __   __
 # \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
 #  \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
@@ -92,7 +92,7 @@ widgets:
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
-        label_offline: "Komorebi Offline"
+        label_offline: "Ayanami Sleep"
         label_workspace_btn: "{name}"
         label_default_name: "{index}"
         label_zero_index: false

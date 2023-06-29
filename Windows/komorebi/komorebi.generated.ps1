@@ -1,5 +1,5 @@
 
-# Writen by Winter Yuan.
+# Wirten by Winter Yuan.
 # __        ___       _             __   __
 # \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
 #  \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
@@ -29,12 +29,6 @@ komorebic.exe identify-border-overflow-application exe "EXCEL.EXE"
 komorebic.exe identify-layered-application exe "EXCEL.EXE"
 # Targets a hidden window spawned by Microsoft Office applications
 komorebic.exe float-rule class "_WwB"
-
-# Microsoft Outlook
-komorebic.exe identify-border-overflow-application exe "OUTLOOK.EXE"
-komorebic.exe identify-layered-application exe "OUTLOOK.EXE"
-# If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
-komorebic.exe identify-tray-application exe "OUTLOOK.EXE"
 
 # Microsoft PC Manager
 komorebic.exe float-rule exe "MSPCManager.exe"
@@ -66,9 +60,6 @@ komorebic.exe identify-tray-application exe "pycharm64.exe"
 # QQ
 komorebic.exe manage-rule exe QQ.exe
 
-# 崩坏：星穹铁道
-komorebic.exe manage-rule exe StarRail.exe
-
 # Steam
 komorebic.exe identify-border-overflow-application class "vguiPopupWindow"
 
@@ -78,11 +69,6 @@ komorebic.exe identify-border-overflow-application class "SDL_app"
 komorebic.exe identify-tray-application class "SDL_app"
 # Target notification toast popups
 komorebic.exe float-rule title "notificationtoasts_"
-
-# System Informer
-# If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
-komorebic.exe identify-tray-application exe "SystemInformer.exe"
-komorebic.exe float-rule exe "SystemInformer.exe"
 
 # SystemSettings
 komorebic.exe float-rule class "Shell_Dialog"
@@ -101,11 +87,6 @@ komorebic.exe float-rule exe "TranslucentTB.exe"
 # If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
 komorebic.exe identify-tray-application exe "TranslucentTB.exe"
 
-# Unreal Editor
-komorebic.exe identify-border-overflow-application exe "UnrealEditor.exe"
-# If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
-komorebic.exe identify-tray-application exe "UnrealEditor.exe"
-
 # Visual Studio
 komorebic.exe identify-object-name-change-application exe "devenv.exe"
 
@@ -118,12 +99,6 @@ komorebic.exe identify-border-overflow-application exe "Code - Insiders.exe"
 # WebTorrent Desktop
 # If you have disabled minimize/close to tray for this application, you can delete/comment out the next line
 komorebic.exe identify-tray-application exe "WebTorrent.exe"
-
-# WinZip (32-bit)
-komorebic.exe float-rule exe "winzip32.exe"
-
-# WinZip (64-bit)
-komorebic.exe float-rule exe "winzip64.exe"
 
 # Windows Console (conhost.exe)
 komorebic.exe manage-rule class "ConsoleWindowClass"
