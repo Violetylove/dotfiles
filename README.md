@@ -45,6 +45,10 @@
     SCOOP_GLOBAL=D:\WorkSpace\scoop
     ```
   
+- 终端文件管理器[`lf`](https://github.com/gokcehan/lf)
+
+  - 配置文件放置在``C:\Users\用户名\AppData\Local\lf``。
+  
 - 全局搜索[`Wox`](https://github.com/Wox-launcher/Wox)和`Everything`
 
   - `Wox`的默认打开快捷键是``Alt+Space``。
