@@ -20,7 +20,7 @@
 
 
 
-### 二、Neovim
+### 二、Neovim(使用vimscript)
 
 - Neovim，简称为nvim
 - Linux，所有文件，包括配置文件``init.vim``应放置在``~/.config/nvim``目录下。
