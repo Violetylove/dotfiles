@@ -124,11 +124,12 @@
     scoop install go-musicfox
     ```
 
-- 终端ASCII艺术字[`figlet-cli`](https://github.com/patorjk/figlet.js)
-  - `` npm install -g figlet-cli``，`npm`是[`Node.js`](https://nodejs.org/en)自带的下载器
+- 终端ASCII艺术字`figlet`
+ 
   
   - 使用方法是输入命令``figlet String``，则可以在终端打印`String`的ASCII艺术字。
   
+  - **省流：**`scoop`下载`figlet`
 
 
 

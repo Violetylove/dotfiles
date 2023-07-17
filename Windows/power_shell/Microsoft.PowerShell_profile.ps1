@@ -8,51 +8,42 @@
 
 ###################### modules #########################
 # Icons
-Import-Module -Name Terminal-Icons
+Import-Module Terminal-Icons
 
 # PSReadLine
 # Import-Module PSReadLine
-Set-PSReadLineOption -PredictionSource History
+# Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete # Tab调出补全菜单
 Set-PSReadLineKeyHandler -Key "Ctrl+u" -Function Undo # 撤销操作
 Set-PSReadLineKeyHandler -Key "Ctrl+RightArrow" -Function ForwardWord # 逐字补全
 # 上下方向键箭头，搜索历史中进行自动补全
-Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
-Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 
 # Z
 Import-Module z
 
-# posh-git
+# posh-git 
 Import-Module posh-git
 
-# Get-ChildItemColor
-# Import-Module Get-ChildItemColor
-
-# PSColor
-Import-Module PSColor
-
 ###################### aliases #########################
-
+Set-Alias vi nvim
+Set-Alias s scoop
+function .. { cd .. }
 
 #################### on-my-posh  #######################
-oh-my-posh init pwsh --config 'C:\Users\23879\AppData\Local\Programs\oh-my-posh\themes\takuya.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'D:\WorkSoftware\scoop\apps\oh-my-posh\current\themes\multiverse-neon.omp.json' | Invoke-Expression
 # 主题
-# kali
-# star
-# kushal
-# night-owl
-# takuya
-# montys
+# emodipt-extend
+# nordtron
+# multiverse-neon
 
 ###################### starship ########################
-#Invoke-Expression (&starship init powershell)
+# Invoke-Expression (&starship init powershell)
 # 配置文件位置
-#$ENV:STARSHIP_CONFIG = "$HOME/.config/starship.toml"
+# $ENV:STARSHIP_CONFIG = "$HOME/.config/starship.toml"
 # 其他配置
-#function Invoke-Starship-PreCommand {
+# function Invoke-Starship-PreCommand {
 #    $host.ui.Write("🚀 Ayanami Rei")
-#}
+# }
 
 ###################### musicfox ########################
 Set-Alias -Name wyy -Value musicfox
@@ -86,3 +77,10 @@ function koyasp { kosp && yasp }
 
 ###################### neovide #########################
 Set-Alias -Name gvim -Value neovide
+
+######################### lf ############################     
+Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lfcd.ps1')
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
