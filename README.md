@@ -55,6 +55,8 @@
 
 - 平铺式窗口管理器[`GlazeWM`](https://github.com/lars-berger/GlazeWM)
   
+  - 它的配置文件路径为``C:\Users\23879\.glaze-wm\config.yaml``
+  
   - 它真的很优秀，比`komorebi`稳定得多也强大得多。此外`komorebi`还需要结合其他程序才能运作，不好。
   
   - **所以，下面的`whkd`,`komorebi`,`yasb`正式废弃，可以不看了。之后会考虑删除。**
