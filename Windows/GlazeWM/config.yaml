@@ -1,82 +1,125 @@
+focus_borders: 
+  active: 
+    enabled: true
+    color: "#7ce38b"
+  inactive: 
+    enabled: false
+
 gaps:
-  inner_gap: 2
-  outer_gap: 2
+  inner_gap: 10
+  outer_gap: 5
 
 general:
-  show_floating_on_top: false
+  show_floating_on_top: true
+  cursor_follows_focus: true 
+  focus_follows_cursor: true
   toggle_workspace_on_refocus: false
-  # focus_border_color: "#ffffff33"
 
 bar:
   height: "30px"
   position: "top"
   always_on_top: true
   opacity: 1.0
-  
-  background: "#696969"
-  # foreground: "#000000"
-  foreground: "#ffffff"
-  font_family: "Segoe UI"
+  background: "#1c2128"
+  foreground: "#f0f6fc"
+  font_family: "JetBrainsMono Nerd Font Mono"
   font_size: "13px"
   padding: "4px 6px"
-  offset_x: "0"
-  offset_y: "0"
-  border_radius: "0"
+  offset_x: "5"
+  offset_y: "5"
+  border_radius: "6"
+  border_color: "#343A41"
+  border_width: 1
 
   components_left:
+    - type: "text"
+      text: " ATOVIO "
+      foreground: "#7ce48b"
     - type: "workspaces"
-      focused_workspace_background: "#778899"
-      displayed_workspace_background: "#A9A9A9"
+      focused_workspace_background: "#21262d"
+      focused_workspace_foreground: "#7ce48b"
+      displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
+      margin: "0px 10px 0px 0px"
+    - type: "cpu"
+      label: "<attr fs='20' fg='#7ce38b'></attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 1000
+    - type: "memory"
+      label: "<attr fs='20' fg='#7ce38b'></attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 1000
+
   components_center:
     - type: "window title"
-      background: "#FFF0F5"
-      foreground: "#000000"
+      foreground: "#ffffff"
       padding: "0 8px"
+
   components_right:
+    - type: "system tray"
+      padding: "4px 6px"
+      foreground: "#7ce38b"
+    # - type: "network"
+    #   foreground: "#7ce48b"
+    #   padding: "0 8px"
+    #   font_family: "JetBrainsMono Nerd Font Mono"
+    #   label_no_internet: ""
+    #   label_ethernet: "󰈁"
+    #   label_wifi_strength_0: "󰤯"
+    #   label_wifi_strength_25: "󰤟"
+    #   label_wifi_strength_50: "󰤢"
+    #   label_wifi_strength_75: "󰤥"
+    #   label_wifi_strength_100: "󰤨"
+    - type: "weather"
+      latitude: 39.9178
+      longitude: 119.5472
+      label: "<attr fs='20' fg='#7ce38b'></attr>{temperature_celsius}°C"
+      label_sun: "<attr fs='20' fg='#7ce38b'>󰖙</attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='20' fg='#7ce38b'>󰖔</attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='20' fg='#7ce38b'>󰼱</attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='20' fg='#7ce38b'>󰖕</attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='20' fg='#7ce38b'>󰖖</attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='20' fg='#7ce38b'>󰼳</attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='20' fg='#7ce38b'>󰖖</attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='20' fg='#7ce38b'>󰖘</attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='20' fg='#7ce38b'>󰖓</attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='20' fg='#7ce38b'></attr>{temperature_celsius}°C"
+      margin: "0px 10px 0px 0px"
+
+    - type: "volume"
+      label: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      padding: "0 8px"
+      label_low: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_medium: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_high: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_mute: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
-      background: "#4682B4"
+      foreground: "#7ce38b"
+      background: "#ffffff33"
       margin: "0 4px"
       padding: "0 8px"
-
     - type: "binding mode"
-      background: "#4682B4"
+      background: "#ffffff33"
       margin: "0 4px 0 0"
       padding: "0 8px"
-
     - type: "clock"
-      time_formatting: "hh:mm tt"
-      background: "#F5DEB3"
-      foreground: "#000000"
-      margin: "0 8px 0 8px"
-      padding: "0 8px"
-
-    - type: "battery"
-      label_draining: "[{battery_level}%]"
-      label_power_saver: "[{battery_level}%]"
-      label_charging: "[{battery_level}%]"
-      foreground: "#2E8B57"
-      background: "#FFF5EE"
-      margin: "0 4px"
-      padding: "0 8px"
+      foreground: "#7ce38b"
+      time_formatting: "hh:mm:ss tt  ddd MMM d  "
+      margin: "0 0 0 10px"
 
 workspaces:
   - name: "1"
-    display_name: "Violet"
+    display_name: "壹"
   - name: "2"
-    display_name: "Ayanami"
+    display_name: "贰"
   - name: "3"
-    display_name: "Ishimiya"
+    display_name: "叁"
   - name: "4"
-    display_name: "Mikasa"
+    display_name: "肆"
   - name: "5"
-    display_name: "Alen"
-  - name: "6"
-  - name: "7"
-  - name: "8"
-  - name: "9"
+    display_name: "伍"
 
 window_rules:
   - command: "ignore"
@@ -122,13 +165,13 @@ keybindings:
     bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
 
   - command: "resize width -2%"
-    binding: "Alt+U"
+    binding: "Alt+A"
   - command: "resize width +2%"
-    binding: "Alt+P"
+    binding: "Alt+D"
   - command: "resize height +2%"
-    binding: "Alt+O"
+    binding: "Alt+W"
   - command: "resize height -2%"
-    binding: "Alt+I"
+    binding: "Alt+S"
 
   - command: "binding mode resize"
     binding: "Alt+R"
@@ -173,14 +216,6 @@ keybindings:
     binding: "Alt+4"
   - command: "focus workspace 5"
     binding: "Alt+5"
-  - command: "focus workspace 6"
-    binding: "Alt+6"
-  - command: "focus workspace 7"
-    binding: "Alt+7"
-  - command: "focus workspace 8"
-    binding: "Alt+8"
-  - command: "focus workspace 9"
-    binding: "Alt+9"
 
   - commands: ["move to workspace 1", "focus workspace 1"]
     binding: "Alt+Shift+1"
@@ -192,11 +227,3 @@ keybindings:
     binding: "Alt+Shift+4"
   - commands: ["move to workspace 5", "focus workspace 5"]
     binding: "Alt+Shift+5"
-  - commands: ["move to workspace 6", "focus workspace 6"]
-    binding: "Alt+Shift+6"
-  - commands: ["move to workspace 7", "focus workspace 7"]
-    binding: "Alt+Shift+7"
-  - commands: ["move to workspace 8", "focus workspace 8"]
-    binding: "Alt+Shift+8"
-  - commands: ["move to workspace 9", "focus workspace 9"]
-    bindings: ["Alt+Shift+9"]
