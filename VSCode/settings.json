@@ -63,7 +63,7 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "D:\\Things\\dotfiles\\VSCode\\.vscodevimrc",
+    "vim.vimrc.path": "$HOME/.vscodevimrc",
     // vscodevim-keymap
     "vim.leader": "<space>",
     "vim.normalModeKeyBindings": [
