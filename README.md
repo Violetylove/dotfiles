@@ -7,6 +7,10 @@
 - 有问题可联系我。
   - [`哔哩哔哩`](https://space.bilibili.com/200569093)
 
+### Visual Studio Code
+
+- 配置文件和按键映射配置文件
+
 ### Windows系统的工具
 
 - `Windows Terminal`和`Power Shell`
@@ -149,5 +153,3 @@
 
   - [官网](https://limestart.cn/)
 
-- Visual Studio Code
-  - 配置文件和按键映射配置文件
