@@ -124,7 +124,7 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[jsonc]": {
+    "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
+    }
 }
