@@ -62,7 +62,7 @@
   
   - 二者的默认打开快捷键是``Alt+Space``。
 
-  - **闲话：**国产应用[utools]也非常不错，干净、插件丰富。只是我不喜欢罢了
+  - **闲话：**国产应用`utools`也非常不错，干净、插件丰富。只是我不喜欢罢了
 
 - 平铺式窗口管理器[`GlazeWM`](https://github.com/lars-berger/GlazeWM)
   
