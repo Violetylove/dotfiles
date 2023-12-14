@@ -49,9 +49,16 @@
   
   - 配置文件放置在``C:\Users\用户名\AppData\Local\lf``。
 
-- 全局搜索[`Wox`](https://github.com/Wox-launcher/Wox)和`Everything`
+- 全局搜索
+  - [`Wox`](https://github.com/Wox-launcher/Wox)和[`Flow.Launcher`](https://github.com/Flow-Launcher/Flow.Launcher)
+
+  - 首先，对于文件检索来所说，Windows索引功能不如`Everything`。所以它们都需要`Everything`的支持，可以使用`Scoop`下载。
+
+  - 对我来说，二者的最大的区别在于UI了，我觉得`Flow.Launcher`好看很多。
   
-  - `Wox`的默认打开快捷键是``Alt+Space``。
+  - 二者的默认打开快捷键是``Alt+Space``。
+
+  - **闲话：**国产应用[utools]也非常不错，干净、插件丰富。只是我不喜欢罢了
 
 - 平铺式窗口管理器[`GlazeWM`](https://github.com/lars-berger/GlazeWM)
   
@@ -137,5 +144,10 @@
 ### 浏览器插件
 
 - Vimium C
+
 - 青柠起始页
+
   - [官网](https://limestart.cn/)
+
+- Visual Studio Code
+  - 配置文件和按键映射配置文件

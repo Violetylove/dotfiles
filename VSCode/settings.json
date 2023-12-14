@@ -1,0 +1,260 @@
+{
+    // editor
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "Maple Mono NF,Cascadia Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.tabSize": 4,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line",
+                    "comment.line.double-slash",
+                    "punctuation.definition.comment"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // extension
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "files.autoSave": "afterDelay",
+    "zenMode.hideLineNumbers": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    // 插件
+    "gitlens.codeLens.enabled": false,
+    // workbench
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    // liveServer
+    "liveServer.settings.donotShowInfoMsg": true,
+    // prettier
+    "prettier.tabWidth": 4,
+    "prettier.bracketSameLine": true,
+    // vscodevim
+    // vscodevim-option
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "white",
+    "vim.incsearch": true,
+    "vim.showmodename": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    // vscodevim-keymap
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        // 插件keymap
+        // Leap
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "commands": [
+                "leap.findForward"
+            ]
+        },
+        // toggle Boolean插件
+        {
+            "before": [
+                "leader",
+                "i"
+            ],
+            "commands": [
+                "extension.toggleBool"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                ":w"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                ":q"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "v",
+                "s"
+            ],
+            "commands": [
+                ":vsp"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "commands": [
+                ":bprev"
+            ]
+        },
+        {
+            "before": [
+                "L"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "n",
+                "l"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "k"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.mark.next"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.mark.prev"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+            "when": [
+                "inputFocus && vim.mode == 'Normal'"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.files.action.focusFilesExplorer"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleZenMode"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "$"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-a>": false,
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-f>": false
+    },
+    "terminal.external.windowsExec": "pwsh.exe",
+    // 语言设置
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+}
