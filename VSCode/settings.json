@@ -37,12 +37,12 @@
     "files.autoSave": "afterDelay",
     "zenMode.hideLineNumbers": false,
     "security.workspace.trust.untrustedFiles": "open",
-    // 插件
-    "gitlens.codeLens.enabled": false,
     // workbench
     "workbench.colorTheme": "Tokyo Night",
     "workbench.statusBar.visible": true,
     "workbench.startupEditor": "none",
+    // 插件
+    "gitlens.codeLens.enabled": false,
     // liveServer
     "liveServer.settings.donotShowInfoMsg": true,
     // prettier
@@ -254,7 +254,7 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "[jsonc]": {
+    "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
 }
