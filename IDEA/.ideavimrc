@@ -1,0 +1,115 @@
+" ==========================================================================================================
+"            __        ___       _             __   __
+"            \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
+"             \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
+"              \ V  V / | | | | | ||  __/ |      | || |_| | (_| | | | |
+"               \_/\_/  |_|_| |_|\__\___|_|      |_| \__,_|\__,_|_| |_|
+" ==========================================================================================================
+
+" ==========================================================================================================
+"                          ================= 插件列表 =====================
+" ==========================================================================================================
+" 环绕
+Plug 'tpope/vim-surround'
+" 快速跳转
+Plug 'easymotion/vim-easymotion'
+" 文件树
+Plug 'preservim/nerdtree'
+
+" ==========================================================================================================
+"                          ================= 插件设置 =====================
+" ==========================================================================================================
+" easymotion
+nmap ss <Plug>(easymotion-s2)
+" 设置保持英文输入法
+set keep-english-in-normal
+" 打开文件树
+nnoremap <Space>e :NERDTree<CR>
+
+" ==========================================================================================================
+"                          ================= 基础设置 =====================
+" ==========================================================================================================
+set clipboard+=unnamed
+set number
+
+" 显示相对行号
+set relativenumber
+" 实时开启搜索高亮
+set incsearch
+" 搜索结果高亮
+set hlsearch
+set encoding=utf-8
+" 设置智能大小写
+set smartcase      
+" 显示模式
+set showmode
+" 设置没有声音
+set noerrorbells
+set visualbell
+
+" ==========================================================================================================
+"                              ============== 键位设置 ===================
+" ==========================================================================================================
+let mapleader=" "
+" 进入 normal模式
+inoremap jk <Esc>
+" 退出
+nnoremap <leader>q :q<CR>
+" 窗口切换
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+" 分割窗口
+noremap <leader>s <C-w>s
+noremap <leader>v <C-w>v
+" 跳至行尾
+nnoremap ; $
+" 行内删除
+nnoremap dl d$
+nnoremap df d^
+" 去除搜索后高亮
+nnoremap <leader>nl :nohl<CR>
+
+" action
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+" 跳转到错误
+nnoremap g[ :action GotoNextError<CR>
+nnoremap g] :action GotoPreviousError<CR>
+" 格式化代码
+nnoremap <leader>c :action ReformatCode<CR>
+" 重命名
+nnoremap <leader>rn :action RenameElement<CR>
+
+" sethandler
+sethandler <C-2> a:ide
+sethandler <C-S-2> a:ide
+sethandler <C-6> a:ide
+sethandler <C-S-6> a:ide
+sethandler <C-;> a:vim
+sethandler <C-S-;> a:vim
+sethandler <C-A> a:ide
+sethandler <C-B> a:vim
+sethandler <C-C> a:ide
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-F> a:vim
+sethandler <C-G> a:vim
+sethandler <C-H> a:vim
+sethandler <C-I> a:vim
+sethandler <C-J> a:vim
+sethandler <C-K> a:vim
+sethandler <C-L> a:vim
+sethandler <C-M> a:ide
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:ide
+sethandler <C-Q> a:ide
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-V> a:ide
+sethandler <C-W> a:vim
+sethandler <C-X> a:ide
+sethandler <C-Y> a:ide

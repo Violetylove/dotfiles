@@ -1,5 +1,6 @@
 {
-  "last_update": "2023-06-27T19:45:41.2610484+08:00",
-  "scoop_repo": "https://gitee.com/glsnames/scoop-installer",
-  "scoop_branch": "archieve"
+  "last_update": "2023-12-15T11:21:46.8237618+08:00",
+  "proxy": "127.0.0.1:10809",
+  "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+  "scoop_branch": "master"
 }
