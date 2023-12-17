@@ -51,7 +51,7 @@
 
 - 终端文件管理器[`lf`](https://github.com/gokcehan/lf)
   
-  - 配置文件放置在``C:\Users\用户名\AppData\Local\lf``。
+  - 配置文件放置在``$HOME\AppData\Local\lf``。
 
 - 全局搜索
   - [`Wox`](https://github.com/Wox-launcher/Wox)和[`Flow.Launcher`](https://github.com/Flow-Launcher/Flow.Launcher)
@@ -66,7 +66,7 @@
 
 - 平铺式窗口管理器[`GlazeWM`](https://github.com/lars-berger/GlazeWM)
   
-  - 它的配置文件路径为``C:\Users\23879\.glaze-wm\config.yaml``
+  - 它的配置文件路径为``$HOME\.glaze-wm\config.yaml``
   
   - 它真的很优秀，比`komorebi`稳定得多也强大得多。此外`komorebi`还需要结合其他程序才能运作，不好。
   
