@@ -1,8 +1,8 @@
-focus_borders: 
-  active: 
+focus_borders:
+  active:
     enabled: true
     color: "#7ce38b"
-  inactive: 
+  inactive:
     enabled: false
 
 gaps:
@@ -11,7 +11,7 @@ gaps:
 
 general:
   show_floating_on_top: true
-  cursor_follows_focus: true 
+  cursor_follows_focus: true
   focus_follows_cursor: true
   toggle_workspace_on_refocus: false
 
@@ -126,6 +126,9 @@ window_rules:
 
   - command: "set floating"
     match_class_name: "#32770"
+
+  - command: "set floating"
+    match_process_name: "musicfox"
 
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"

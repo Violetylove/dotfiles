@@ -16,7 +16,7 @@ rem set MSYS=error_start:%WD%../../mingw64/bin/qtcreator.exe^|-debug^|^<process-
 rem To export full current PATH from environment into MSYS2 use '-use-full-path' parameter
 rem or uncomment next line
 set MSYS2_PATH_TYPE=inherit
-set HOME=D:\GlobalConfig\msys2\home\Winter
+REM set HOME=D:\WinterGConfig\msys2\home\Winter
 
 :checkparams
 rem Help option

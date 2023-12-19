@@ -51,7 +51,7 @@
 
 - 终端文件管理器[`lf`](https://github.com/gokcehan/lf)
   
-  - 配置文件放置在``$HOME\AppData\Local\lf``。
+  - 配置文件路径为``$HOME\AppData\Local\lf``。
 
 - 全局搜索
   - [`Wox`](https://github.com/Wox-launcher/Wox)和[`Flow.Launcher`](https://github.com/Flow-Launcher/Flow.Launcher)
@@ -69,65 +69,6 @@
   - 它的配置文件路径为``$HOME\.glaze-wm\config.yaml``
   
   - 它真的很优秀，比`komorebi`稳定得多也强大得多。此外`komorebi`还需要结合其他程序才能运作，不好。
-  
-  - **所以，下面的`whkd`,`komorebi`,`yasb`正式废弃，可以不看了。之后会考虑删除。**
-
-- 全局热键 [`whkd`](https://github.com/LGUG2Z/whkd)
-  
-  - 配置文件`whkdrc`放到`~\.config`路径下。
-  - **省流：**可在终端``scoop install whkd``安装。
-
-- 窗口管理器[`komorebi`](https://github.com/LGUG2Z/komorebi)
-  
-  - 这个就比较生猛了，配置文件`komorebi.generated.ps1`,`komorebi.ps1`放置在`~`目录下。
-    
-    - 当然，我推荐修改路径，使其更易管理。定义一个环境变量：
-      
-      ```shell
-       # 在Power Shell的配置文件$PROFILE加入这句
-       # 千万别写成 ~\.config\komorebi,会失效的
-       $Env:KOMOREBI_CONFIG_HOME = 'C:\Users\用户名\.config\komorebi'
-      ```
-      
-      此时我们的默认路径就变成了``C:\Users\用户名\.config\komorebi``。
-  
-  - 这个应用只负责管理窗口，热键绑定需要依靠上面的`whkd`或者[`AutoHotKey`](https://www.autohotkey.com/)。二者的区别在于，`whkd`是仅仅一个热键应用，但`AutoHotKey`是一种脚本语言，可以实现Windows下的按键和命令。
-  
-  - 我用的是`whkd`，比较简洁。
-  
-  - **省流：**可在终端``scoop install komorebi``安装
-
-- 状态栏[`yasb`](https://github.com/denBot/yasb)
-  
-  - 克隆项目到本地，配置文件`config.yaml`,`styles.css`放置到`~\.yasb`；
-    
-    - 又到最喜欢的路径环节了。在我翻翻查查文件时，看到了``src\settings.py``写的东西了。里面可以修改配置路径：
-      
-      ```python
-      # 修改这一句，将配置文件路径修改为 C:\Users\用户名\.config\yasb
-       DEFAULT_CONFIG_DIRECTORY = "C:\\Users\\用户名\\.config\\yasb"
-      ```
-
-- 安装依赖，终端执行``pip install -r requirements.txt``；
-
-- 我刚开始用的是Python3.11，报了好多错误。后来改用Python3.9一下子就弄好了；
-
-- 最后运行``python src\main.py``。
-
-- **(推荐)**将该文件`main.py`的后缀改为`pyw`，并用`pythonw.exe`程序运行，可以达到后台运行的效果。
-  
-  - **(最最推荐)**但主程序放置在文件夹中，不方便打开。我们又将文件名设置成一个容易被`Wox`搜索的名字，比如`ya.st.pyw`，至此我们很快打开它。
-
-- 可在`Power Shell`的配置文件`$PROFILE`中添加别名函数，以更快捷地关闭它。
-  
-  ```shell
-  # 添加函数yasp,意为yasb stop
-  function{
-      # 由于yasb没有提供终端开启或关闭的方法，我们只能杀死pythonw.exe进程。
-      # 注意：要去任务管理器查看实际的进程名称，并修改下面的pythonw3.9.exe,否则该命令无效。
-      taskkill /f /im pythonw3.9.exe
-  }
-  ```
 
 - 终端音乐播放器[`musicfox`](https://github.com/go-musicfox/go-musicfox)
   
