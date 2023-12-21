@@ -1,23 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZSH=$HOME/.oh-my-zsh
-
-# Themes
-# ZSH_THEME="gozilla"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="ys"
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# 大小写精确匹配
-# CASE_SENSITIVE="true"
-
-# zstyle ':omz:update' mode disabled  # disable, auto, reminder
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
 
 ENABLE_CORRECTION="true"
 
@@ -29,16 +16,6 @@ ENABLE_CORRECTION="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(
-    git 
-    z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-source $ZSH_CUSTOM/plugins/*
-
 export LANG=zh_CN.UTF-8
 
 # Compilation flags
@@ -46,40 +23,32 @@ export LANG=zh_CN.UTF-8
 
 alias et="exit"
 alias cls="clear"
-alias gpr="git config --global http.proxy localhost:7890"
+alias gpr="git config --global http.proxy http://192.168.216.230:7890"
 alias gupr="git config --global --unset http.proxy"
-alias s=scoop
-alias spr="scoop config proxy localhost:7890"
-alias supr="scoop config rm proxy"
 alias vi="nvim"
 alias wyy="musicfox"
-alias zshconfig="nvim ~/.zshrc"
 
-###### Scoop ######
-# 安装
-sis() {
-    scoop install "$@"
-}
-# 卸载
-sui() {
-    scoop uninstall "$@"
-}
-# 更新
-sud() {
-  if [[ $# -eq 0 ]]; then
-    # 如果没有参数，执行默认操作
-    scoop update
-  else
-    # 如果有参数，处理参数
-    for arg in "$@"; do
-      scoop update $arg
-    done
-  fi
-}
-# 搜索
-ssc() {
-    scoop search "$@"
-}
+########## Source ############
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/autojump/autojump.zsh
+
+######### Zim ############
+zstyle ':zim:zmodule' use 'degit'
+zstyle ':zim:git' alias-prefix 'g'
+ZIM_HOME=~/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+alias zf="zimfw"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

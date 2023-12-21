@@ -1,7 +1,7 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
-import:
-  - "~/.config/alacritty/themes/everforest_dark.toml"
+# import:
+  # - "~/.config/alacritty/themes/everforest_dark.toml"
 #  - /path/to/alacritty.yml
 
 # env:
@@ -90,29 +90,29 @@ colors:
   #   white: "#eaeaea"
 
   #### everforest_dark ####
-  # primary:
-  #   background: "#2d353b"
-  #   foreground: "#d3c6aa"
-  #
-  # normal:
-  #   black: "#475258"
-  #   red: "#e67e80"
-  #   green: "#a7c080"
-  #   yellow: "#dbbc7f"
-  #   blue: "#7fbbb3"
-  #   magenta: "#d699b6"
-  #   cyan: "#83c092"
-  #   white: "#d3c6aa"
-  #
-  # bright:
-  #   black: "#475258"
-  #   red: "#e67e80"
-  #   green: "#a7c080"
-  #   yellow: "#dbbc7f"
-  #   blue: "#7fbbb3"
-  #   magenta: "#d699b6"
-  #   cyan: "#83c092"
-  #   white: "#d3c6aa"
+  primary:
+    background: "#2d353b"
+    foreground: "#d3c6aa"
+
+  normal:
+    black: "#475258"
+    red: "#e67e80"
+    green: "#a7c080"
+    yellow: "#dbbc7f"
+    blue: "#7fbbb3"
+    magenta: "#d699b6"
+    cyan: "#83c092"
+    white: "#d3c6aa"
+
+  bright:
+    black: "#475258"
+    red: "#e67e80"
+    green: "#a7c080"
+    yellow: "#dbbc7f"
+    blue: "#7fbbb3"
+    magenta: "#d699b6"
+    cyan: "#83c092"
+    white: "#d3c6aa"
 
   # Bright and dim foreground colors
   #
@@ -298,11 +298,11 @@ blink_interval: 750
 
 # Shell
 shell:
-  program: pwsh
-  args:
-    - --nologo
+  program: /usr/bin/zsh
+  # args:
+  #   - --nologo
 
-working_directory: d:\
+# working_directory: d:\
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
 
