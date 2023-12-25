@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -17,21 +16,22 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 export LANG=zh_CN.UTF-8
-
+export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-alias et="exit"
+alias ..="cd .."
+alias cmt="git add -A ;git commit -m"
 alias cls="clear"
-alias gpr="git config --global http.proxy http://192.168.216.230:7890"
+alias et="exit"
+alias ls="ls -a"
+alias gpr="git config --global http.proxy localhost:2081"
 alias gupr="git config --global --unset http.proxy"
-alias vi="nvim"
+alias pac="sudo pacman"
+alias reset="source ~/.zshrc;cd ~;cls"
+alias v="nvim"
+alias w="nitrogen --set-auto ~/Beautify/Background/room.png"
 alias wyy="musicfox"
-
-########## Source ############
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/autojump/autojump.zsh
 
 ######### Zim ############
 zstyle ':zim:zmodule' use 'degit'

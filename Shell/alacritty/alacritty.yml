@@ -21,13 +21,13 @@ window:
   # - full: Borders and title bar
   # - none: Neither borders nor title bar
   decorations: none
-  #opacity: 1.0
+  opacity: 0.8
   # - Windowed
   # - Maximized
   # - Fullscreen
   startup_mode: Windowed
   title: Alacritty
-  # dynamic_title: true
+  dynamic_title: true
   # decorations.`Dark`, `Light`, and `None`
   decorations_theme_variant: Dark
   resize_increments: false
