@@ -2,5 +2,4 @@ zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
 
-zmodule romkatv/powerlevel10k
 zmodule rupa/z
