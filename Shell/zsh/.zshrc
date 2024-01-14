@@ -1,3 +1,11 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -9,21 +17,26 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 export LANG=zh_CN.UTF-8
-export EDITOR='vim'
-# Compilation flags
+# export EDITOR='vim'
 # export ARCHFLAGS="-arch x86_64"
 
 alias ..="cd .."
 alias cmt="git add -A ;git commit -m"
 alias cls="clear"
 alias et="exit"
-alias ls="ls -a"
-alias gpr="git config --global http.proxy localhost:2081"
+alias ls="ls -a --color=auto"
+alias gpr="git config --global http.proxy localhost:7890"
 alias gupr="git config --global --unset http.proxy"
-alias pac="sudo pacman"
+alias pac="pacman"
 alias reset="source ~/.zshrc;cd ~;cls"
+alias s="scoop"
+alias sis="scoop install"
+alias sui="scoop uninstall"
+alias spr="scoop config proxy localhost:7890"
+alias supr="scoop config rm proxy"
+alias sud="scoop update"
+alias ssc="scoop search"
 alias v="nvim"
-alias w="nitrogen --set-auto ~/Beautify/Background/room.png"
 alias wyy="musicfox"
 
 ######### Zim ############
@@ -42,3 +55,6 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 alias zf="zimfw"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
