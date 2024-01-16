@@ -2,6 +2,7 @@ live_config_reload = true
 import = [
 # "~/.config/alacritty/themes/themes/everforest_dark.toml",
 "~/.config/alacritty/themes/themes/tokyo-night.toml",
+# # "~/.config/alacritty/themes/themes/gruvbox_dark.toml",
 ]
 
 [bell]
@@ -15,30 +16,6 @@ program = "notify-send"
 
 [colors]
 draw_bold_text_with_bright_colors = false
-
-# [colors.normal]
-# black = "#475258"
-# blue = "#7fbbb3"
-# cyan = "#83c092"
-# green = "#a7c080"
-# magenta = "#d699b6"
-# red = "#e67e80"
-# white = "#d3c6aa"
-# yellow = "#dbbc7f"
-#
-# [colors.primary]
-# background = "#2d353b"
-# foreground = "#d3c6aa"
-#
-# [colors.bright]
-# black = "#475258"
-# blue = "#7fbbb3"
-# cyan = "#83c092"
-# green = "#a7c080"
-# magenta = "#d699b6"
-# red = "#e67e80"
-# white = "#d3c6aa"
-# yellow = "#dbbc7f"
 
 [colors.cursor]
 cursor = "CellForeground"
@@ -145,6 +122,7 @@ action = "Copy"
 key = "C"
 mods = "Control"
 
+# Only Windows
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
 key = "Return"
@@ -178,8 +156,9 @@ multiplier = 20
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [shell]
-args = ["--nologo"]
-program = "pwsh"
+# args = ["--nologo"]
+program = "zsh"
+# program = "pwsh"
 
 [window]
 decorations = "none"
