@@ -8,4 +8,5 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "/home/winter/.local/share/rofi/themes/rounded-nord-dark.rasi"
+//@theme "/home/winter/.local/share/rofi/themes/rounded-nord-dark.rasi"
+@theme "/home/winter/.config/rofi/themes/squared-everforest.rasi"

@@ -8,6 +8,8 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 focus_follows_mouse no
+hide_edge_borders both
+popup_during_fullscreen smart
 
 # gaps
 gaps inner 2
@@ -23,26 +25,24 @@ default_floating_border pixel 1
 
 # run some apps
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id feh --bg-fill ~/Downloads/room.jpg
-# exec --no-startup-id ~/.config/polybar/launch.sh --forest
-exec --no-startup-id polybar
+exec --no-startup-id feh --bg-fill ~/Pictures/backgrounds/GreenHairGirl.png
+exec --no-startup-id sh ~/.config/polybar/launch.sh
 # exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 exec --no-startup-id fcitx5
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock.sh'
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# volume
+bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+# light
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-# run rofi
-bindsym $mod+d exec rofi -show run -show-icons
-bindsym $mod+Tab exec rofi -show window -show-icons
+# key bindings
 # kill focus
 bindsym $mod+q kill
 # i3 
@@ -50,12 +50,14 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+Return workspace number $ws1;exec i3-sensible-terminal
+# run rofi
+bindsym $mod+d exec rofi -show run -show-icons
+bindsym $mod+Tab exec rofi -show window -show-icons
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
+bindsym $mod+Shift+p exec rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
+# other
+bindsym $mod+n exec --no-startup-id neovide
 
 # change focus
 bindsym $mod+j focus left
@@ -141,6 +143,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+bindsym $mod+r mode "resize"
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
@@ -156,8 +159,13 @@ mode "resize" {
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
+# #546735 -> #81a1c1
+# class                 border  backgr. text    indicator child_border
+client.focused          #81a1c1 #81a1c1 #F8F8F2 #81a1c1   #81a1c1
+client.focused_inactive #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
+client.unfocused        #2E3440 #2E3440 #BFBFBF #2E3440   #2E3440
+client.urgent           #2E3440 #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
+client.background       #F8F8F2

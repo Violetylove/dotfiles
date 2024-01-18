@@ -1,0 +1,29 @@
+* 终端，alacritty
+* 壁纸 ，feh
+* 解压，ark
+* 图片查看器，gwenview
+* 视频播放器，mpv
+* 文件管理器，thunar
+* 音乐播放器，netease-cloud-music-gtk4 
+* 字体，
+    * 中文，
+    adobe-source-han-serif-cn-fonts wqy-zenhei 
+    * 其他
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-ms-win11-auto-zh_cn
+    nerd fonts 
+        ==> ttf-cascadiacode-nf maple-mono-nf ttf-jetbrains-mono-nerd
+        ==> CaskaydiaCove Nerd Font
+            Maple Mono NF
+            JetBrains Mono Nerd Font
+* 输入法，fcitx5-im,fcitx5-chinese-addons,fcitx5-pinyin-moegirl,fcitx5-nord
+* 显示管理器，lightdm,lightdm-gtk-greeter
+* 窗口管理器，i3,polybar,i3lock,
+* 启动器，rofi
+* 通知，dunst
+* 锁屏，i3lock-fancy
+* 特效，picom-ftlabs
+* 音量条，亮度条，xob
+* 音量控件，pulseaudio
+* 网络，networkmanager-applet
+* 蓝牙，rofi-bluetooth
+* 鼠标可视化，screenkey
