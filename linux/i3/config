@@ -32,7 +32,7 @@ exec --no-startup-id nm-applet
 # exec --no-startup-id blueman-applet
 exec --no-startup-id picom --config ~/.config/picom/ftlab.conf &
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock.sh'
-exec --no-startup-id copyq
+exec --no-startup-id copyq & xclip
 
 # key bindings
 # volume
@@ -53,9 +53,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Return workspace number $ws1;exec i3-sensible-terminal
 # run rofi
-bindsym $mod+space exec rofi -show run -show-icons
+bindsym $mod+space exec rofi -show drun -show-icons
 bindsym $mod+Tab exec rofi -show window -show-icons
-bindsym $mod+b exec rofi-bluetooth
+bindsym $mod+Shift+b exec rofi-bluetooth
 bindsym $mod+Shift+p exec rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 # other
 bindsym $mod+n exec --no-startup-id neovide
@@ -104,7 +104,7 @@ bindsym $mod+Shift+space floating toggle
 # bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child

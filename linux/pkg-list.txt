@@ -4,17 +4,19 @@
 * 图片查看器，gwenview
 * 视频播放器，mpv
 * 文件管理器，thunar
-* 音乐播放器，netease-cloud-music-gtk4 ,netease-cloud-music,
+* 剪切板，copyq xclip
+* 音乐播放器，netease-cloud-music-gtk4 yesplaymusic  mpd ncmpcpp
 * 字体，
     * 中文，
     adobe-source-han-serif-cn-fonts wqy-zenhei 
     * 其他
-    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-ms-win11-auto-zh_cn
-    nerd fonts 
-        ==> ttf-cascadiacode-nf maple-mono-nf ttf-jetbrains-mono-nerd
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-ms-win11-auto-zh_cn ttf-font-awesome-pro ttf-material-design-icons-desktop-git
+    nerd fonts: 
+        ==> ttf-cascadiacode-nf maple-mono-nf ttf-jetbrains-mono-nerd ttf-meslo-nerd-font ttf-maple
         ==> CaskaydiaCove Nerd Font
             Maple Mono NF
             JetBrains Mono Nerd Font
+            MesloLGS NF
 * 输入法，fcitx5-im,fcitx5-chinese-addons,fcitx5-pinyin-moegirl,fcitx5-nord,fcitx5-rime,rime-ice(...)
 * 显示管理器，lightdm,lightdm-gtk-greeter
 * 窗口管理器，i3,polybar,i3lock,
