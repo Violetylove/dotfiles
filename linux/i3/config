@@ -56,6 +56,7 @@ bindsym $mod+Return workspace number $ws1;exec i3-sensible-terminal
 bindsym $mod+space exec rofi -show drun -show-icons
 bindsym $mod+Tab exec rofi -show window -show-icons
 bindsym $mod+Shift+b exec rofi-bluetooth
+bindsym $mod+Shift+i exec sh ~/.config/i3/lock.sh
 bindsym $mod+Shift+p exec rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 # other
 bindsym $mod+n exec --no-startup-id neovide
