@@ -6,12 +6,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ENABLE_CORRECTION="true"
+# completion_case_insensitive="true"
+COMPLETION_CASE_INSENSITIVE="true"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 HIST_STAMPS="mm/dd/yyyy"
 
-export LANG=zh_CN.UTF-8
+# export LANG=zh_CN.UTF-8
 export EDITOR='nvim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -21,13 +23,19 @@ alias cmt="git add -A ;git commit -m"
 alias cls="clear"
 alias et="exit"
 alias ls="lsd -a"
-alias neof="neofetch | lolcat"
+alias neof="neofetch"
 alias gpr="git config --global http.proxy localhost:2081"
 alias gupr="git config --global --unset http.proxy"
 alias pac="sudo pacman"
+alias par="paru"
 alias reset="source ~/.zshrc;cd ~;cls"
 alias v="nvim"
 alias wyy="musicfox"
+
+######### keybindings ############
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 
 ######### Zim ############
 zstyle ':zim:zmodule' use 'degit'

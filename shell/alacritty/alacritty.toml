@@ -1,8 +1,8 @@
 live_config_reload = true
 import = [
-# "~/.config/alacritty/themes/themes/everforest_dark.toml",
-# "~/.config/alacritty/themes/themes/tokyo-night.toml",
-"~/.config/alacritty/themes/themes/gruvbox_dark.toml",
+# "~/.config/alacritty/themes/everforest_dark.toml",
+#"~/.config/alacritty/themes/tokyo-night.toml",
+"~/.config/alacritty/themes/gruvbox_dark.toml",
 ]
 
 [bell]
@@ -99,7 +99,7 @@ key = "W"
 mods = "Alt|Shift"
 
 [[keyboard.bindings]]
-action = "None"
+action = "Quit"
 key = "Q"
 mods = "Alt|Shift"
 
@@ -118,7 +118,6 @@ action = "Copy"
 key = "C"
 mods = "Control"
 
-# Only Windows
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
 key = "Return"
@@ -152,9 +151,7 @@ multiplier = 20
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [shell]
-# args = ["--nologo"]
 program = "zsh"
-# program = "pwsh"
 
 [window]
 decorations = "none"

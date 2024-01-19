@@ -9,7 +9,7 @@ font pango:monospace 8
 floating_modifier $mod
 focus_follows_mouse no
 hide_edge_borders both
-popup_during_fullscreen smart
+# popup_during_fullscreen smart
 
 # gaps
 gaps inner 2
@@ -27,12 +27,14 @@ default_floating_border pixel 1
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id feh --bg-fill ~/Pictures/backgrounds/GreenHairGirl.png
 exec --no-startup-id sh ~/.config/polybar/launch.sh
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf &
 exec --no-startup-id fcitx5
 exec --no-startup-id nm-applet
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id blueman-applet
+exec --no-startup-id picom --config ~/.config/picom/ftlab.conf &
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock.sh'
+exec --no-startup-id copyq
 
+# key bindings
 # volume
 bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
@@ -42,7 +44,6 @@ bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFA
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 2
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2
 
-# key bindings
 # kill focus
 bindsym $mod+q kill
 # i3 
@@ -52,12 +53,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Return workspace number $ws1;exec i3-sensible-terminal
 # run rofi
-bindsym $mod+d exec rofi -show run -show-icons
+bindsym $mod+space exec rofi -show run -show-icons
 bindsym $mod+Tab exec rofi -show window -show-icons
-bindsym $mod+b exec --no-startup-id rofi-bluetooth
+bindsym $mod+b exec rofi-bluetooth
 bindsym $mod+Shift+p exec rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 # other
 bindsym $mod+n exec --no-startup-id neovide
+bindsym $mod+f workspace number $ws2;exec firefox
+bindsym $mod+c workspace number $ws8;exec nekoray
 
 # change focus
 bindsym $mod+j focus left
@@ -89,18 +92,16 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
