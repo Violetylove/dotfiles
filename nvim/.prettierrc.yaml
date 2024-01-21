@@ -1,0 +1,11 @@
+# arrowParens: "<always|avoid>"
+# embeddedLanguageFormatting: "<off|auto>"
+bracketSameLine: true
+# 为特定语言配置
+# overrides:
+# - files: "*.js"
+#   options:
+#     bracketSameLine: false
+#     printWidth: 80
+printwidth: 120
+tabwidth: 4

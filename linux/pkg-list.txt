@@ -13,7 +13,7 @@
     * 其他
      ttf-font-awesome-pro ttf-material-design-icons-desktop-git ttf-ms-win11-auto-zh_cn 
     nerd fonts: 
-        ==> ttf-cascadiacode-nf maple-mono-nf ttf-jetbrains-mono-nerd ttf-meslo-nerd-font ttf-maple
+        ==> ttf-cascadiacode-nerd maple-mono-sc-nf ttf-jetbrains-mono-nerd ttf-meslo-nerd-font ttf-maple
         ==> CaskaydiaCove Nerd Font
             Maple Mono NF
             JetBrains Mono Nerd Font
@@ -28,6 +28,6 @@
 * 特效，picom-ftlabs-git
 * 音量条，亮度条，xob
 * 音量控件，pulseaudio
-* 网络，networkmanager-applet
-* 蓝牙，blueman 或 rofi-bluetooth
+* 网络，network-manager-applet
+* 蓝牙，blueman 或 rofi-bluetooth-git
 * 鼠标可视化，screenkey

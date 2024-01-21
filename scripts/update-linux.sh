@@ -3,11 +3,13 @@
 
 cp -rf ~/.ideavimrc ../idea/.ideavimrc
 cp -rf ~/.vscodevimrc ../vscode/.vscodevimrc
-cp -rf ~/.config/dunst ../linux/dunst
-cp -rf ~/.config/rofi ../linux/rofi
-cp -rf ~/.config/i3 ../linux/i3
-cp -rf ~/.config/neofetch ../linux/neofetch
-cp -rf ~/.config/picom ../linux/picom
-cp -rf ~/.config/polybar ../linux/polybar
-cp -rf ~/usr/share/sddm/themes ../linux/sddm/themes
+cp -rf ~/.config/nvim ../
+cp -rf ~/.config/dunst ../linux/
+cp -rf ~/.config/rofi ../linux/
+cp -rf ~/.config/i3 ../linux/
+cp -rf ~/.config/neofetch ../linux/
+cp -rf ~/.config/picom ../linux/
+cp -rf ~/.config/polybar ../linux/
+cp -rf /usr/share/sddm/themes ../linux/sddm/themes
+sudo cp -rf /etc/sddm.conf ../linux/sddm/sddm.conf
 cp -rf ~/Pictures/backgrounds ../backgrounds
