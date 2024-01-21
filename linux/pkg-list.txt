@@ -5,7 +5,7 @@
 * 视频播放器，mpv
 * 文件管理器，thunar
 * 剪切板，copyq xclip
-* 音乐播放器，netease-cloud-music-gtk4 yesplaymusic  mpd ncmpcpp
+* 音乐播放器，netease-cloud-music netease-cloud-music-gtk4 qqmusic-electron yesplaymusic 
 * 字体，
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
     * 中文，

@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 #将应用配置更新到git仓库中
 
+cp -rf ~/.zshrc ../shell/zsh/.zshrc
+cp -rf ~/.zimrc ../shell/zsh/.zimrc
 cp -rf ~/.ideavimrc ../idea/.ideavimrc
 cp -rf ~/.vscodevimrc ../vscode/.vscodevimrc
 cp -rf ~/.config/nvim ../
