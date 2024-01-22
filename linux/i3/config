@@ -54,14 +54,14 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Return workspace number $ws1;exec i3-sensible-terminal
 # run rofi
-bindsym $mod+space exec rofi -show drun -show-icons
+bindsym $mod+d exec rofi -show drun -show-icons
 bindsym $mod+Tab exec rofi -show window -show-icons
 bindsym $mod+Shift+b exec rofi-bluetooth
 bindsym $mod+Shift+i exec sh ~/.config/i3/lock.sh
 bindsym $mod+Shift+p exec rofi -show power-menu -modi power-menu:~/.config/rofi/rofi-power-menu
 # other
 bindsym $mod+n exec --no-startup-id neovide
-bindsym $mod+f workspace number $ws2;exec firefox
+bindsym $mod+b workspace number $ws2;exec firefox
 bindsym $mod+c workspace number $ws8;exec --no-startup-id nekoray
 
 # change focus
@@ -101,9 +101,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
+bindsym $mod+f floating toggle
 
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 # bindsym $mod+a focus parent

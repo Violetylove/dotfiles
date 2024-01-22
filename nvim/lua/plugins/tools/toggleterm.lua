@@ -1,29 +1,47 @@
 return {
     'akinsho/toggleterm.nvim',
-    version = "*", 
+    version = "*",
     lazy = true,
     keys = {
-        { "<leader>ps", "<cmd>lua pwsh_toggle()<CR>", desc = "Power Shell" },
-        { "<leader>lg", "<cmd>lua lazygit_toggle()<CR>", desc = "Lazygit" },
+        { "<leader>lg", "<cmd>lua LazygitToggle()<CR>", desc = "Lazygit" },
+        { "<leader>ps", "<cmd>lua PwshToggle()<CR>",    desc = "Power Shell" },
+        { "<leader>zs", "<cmd>lua ZshToggle()<CR>",     desc = "Zs" },
     },
     config = function()
-        local Terminal  = require('toggleterm.terminal').Terminal
+        local Terminal = require('toggleterm.terminal').Terminal
 
-        local pwsh = Terminal:new({ 
-            cmd = "pwsh -nologo",
-            hidden = true,
-            direction = "float",
-        })
-        local lazygit = Terminal:new({ 
-            cmd = "lazygit",
-            hidden = true,
-            direction = "float",
-        })
-        function pwsh_toggle()
-            pwsh:toggle()
+        -- local pwsh     = Terminal:new({
+        --     cmd = "pwsh -nologo",
+        --     hidden = true,
+        --     direction = "float",
+        -- })
+        -- local lazygit  = Terminal:new({
+        --     cmd = "lazygit",
+        --     hidden = true,
+        --     direction = "float",
+        -- })
+        function PwshToggle()
+            Terminal:new({
+                cmd = "pwsh -nologo",
+                hidden = true,
+                direction = "float",
+            }):toggle()
         end
-        function lazygit_toggle()
-            lazygit:toggle()
+
+        function LazygitToggle()
+            Terminal:new({
+                cmd = "lazygit",
+                hidden = true,
+                direction = "float",
+            }):toggle()
+        end
+
+        function ZshToggle()
+            Terminal:new({
+                cmd = "zsh",
+                hidden = true,
+                direction = "float",
+            }):toggle()
         end
     end,
 }

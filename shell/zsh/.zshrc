@@ -6,22 +6,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ENABLE_CORRECTION="true"
-# completion_case_insensitive="true"
 COMPLETION_CASE_INSENSITIVE="true"
-
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 HIST_STAMPS="mm/dd/yyyy"
+# 将历史记录文件设置为 ~/.zsh_history，并在每次命令执行后更新历史记录（不用等到退出才写入）
+HISTFILE=~/.zsh_history
+HISTSIZE=10000    # 设置历史记录条目数量（可自定义大小）
+SAVEHIST=$HISTSIZE # 保存的历史记录条目数量与之匹配
 
-# export LANG=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
 export EDITOR='nvim'
-# Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 alias ..="cd .."
 alias cmt="git add -A ;git commit -m"
 alias cls="clear"
 alias et="exit"
+alias lgit="lazygit"
 alias ls="lsd -a"
 alias neof="neofetch"
 alias gpr="git config --global http.proxy localhost:2081"
