@@ -1,0 +1,7 @@
+[user]
+	name = Winter
+	email = ayanamiviolet@163.com
+[core]
+	editor = nvim
+[http]
+	proxy = localhost:2081

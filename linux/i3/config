@@ -161,8 +161,8 @@ mode "resize" {
 }
 
 # window rules
-for_window [title="*copyq*"]                floating enable
-for_window [title="*linuxqq*"]              floating enable
-for_window [title="*netease-cloud-music*"]  floating enable
-for_window [title="*qqmusic*"]              floating enable
-for_window [title="*yesplaymusi*"]          floating enable
+for_window [class="*copyq*"] floating enable
+for_window [title="*linuxqq*"] floating enable
+for_window [title="*netease-cloud-music*"] floating enable
+for_window [title="*qqmusic*"] floating enable
+for_window [title="*yesplaymusic*"] floating enable

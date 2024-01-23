@@ -1,11 +1,20 @@
 #!/bin/sh
 
+# gray color
 BLANK='#00000000'
 CLEAR='#2e3440'
 DEFAULT='#4c566a'
 TEXT='#D8DEE9FF'
 WRONG='#81a1c1'
 VERIFYING='#A3BE8CFF'
+
+# green color
+# BLANK='#00000000'
+# CLEAR='#ffffff22'
+# DEFAULT='#00897bE6'
+# TEXT='#00897bE6'
+# WRONG='#880000bb'
+# VERIFYING='#00564dE6'
 
 i3lock \
 --insidever-color=$CLEAR     \

@@ -3,6 +3,7 @@
 
 cp -rf ../idea/.ideavimrc ~/.ideavimrc
 cp -rf ../vscode/.vscodevimrc ~/.vscodevimrc
+cp -rf ../git/.gitconfig ~/.gitconfig
 cp -rf ../nvim ~/.config
 cp -rf ../shell/alacritty ~/.config
 cp -rf ../shell/zsh/.zshrc ~/.zshrc

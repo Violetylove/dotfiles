@@ -24,19 +24,21 @@ alias cls="clear"
 alias et="exit"
 alias lgit="lazygit"
 alias ls="lsd -a"
+# alias ls="ls -a"
 alias neof="neofetch"
 alias gpr="git config --global http.proxy localhost:2081"
 alias gupr="git config --global --unset http.proxy"
 alias pac="sudo pacman"
 alias par="paru"
 alias prr="prime-run"
-alias reset="source ~/.zshrc;cd ~;cls"
+alias reset="source ~/.zshrc;cls"
 alias v="nvim"
 alias wyy="musicfox"
 
 ######### keybindings ############
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
+bindkey  "^[[2~"  clear-screen
 bindkey  "^[[3~"  delete-char
 
 ######### Zim ############
