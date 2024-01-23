@@ -15,11 +15,6 @@ hide_edge_borders both
 gaps inner 2
 gaps outer 2
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-# tiling_drag modifier titlebar
-
-# Window border settings
 default_border pixel 1
 default_floating_border pixel 1
 
@@ -165,11 +160,9 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# #546735 -> #81a1c1
-# class                 border  backgr. text    indicator child_border
-client.focused          #81a1c1 #81a1c1 #F8F8F2 #81a1c1   #81a1c1
-client.focused_inactive #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
-client.unfocused        #2E3440 #2E3440 #BFBFBF #2E3440   #2E3440
-client.urgent           #2E3440 #FF5555 #F8F8F2 #FF5555   #FF5555
-client.placeholder      #2E3440 #2E3440 #F8F8F2 #2E3440   #2E3440
-client.background       #F8F8F2
+# window rules
+for_window [title="*copyq*"]                floating enable
+for_window [title="*linuxqq*"]              floating enable
+for_window [title="*netease-cloud-music*"]  floating enable
+for_window [title="*qqmusic*"]              floating enable
+for_window [title="*yesplaymusi*"]          floating enable

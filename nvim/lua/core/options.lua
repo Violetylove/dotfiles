@@ -52,3 +52,13 @@ opt.background = "dark" -- or "light" for light mode
 -- 代码块折叠
 opt.foldmethod = "indent" -- "marker", "indent"
 opt.foldlevel = 99
+
+
+-- neovide options
+vim.o.guifont = "Maple Mono SC NF:h10"
+-- 仅在neovide中生效的配置
+if vim.g.neovide then
+    -- Put anything you want to happen only in Neovide here
+    -- vim.o.guifont = "Source Code Pro:h14"
+    -- vim.o.guifont = "Maple Mono SC NF:5"
+end
