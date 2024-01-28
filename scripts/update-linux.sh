@@ -5,6 +5,8 @@ cp -rf ~/.zshrc ../shell/zsh/.zshrc
 cp -rf ~/.zimrc ../shell/zsh/.zimrc
 cp -rf ~/.gitconfig ../git/.gitconfig
 cp -rf ~/.ideavimrc ../idea/.ideavimrc
+cp -rf ~/.config/Code/settings.json ../vscode/settings.json 
+cp -rf ~/.config/Code/keybindings.json ../vscode/keybindings.json
 cp -rf ~/.vscodevimrc ../vscode/.vscodevimrc
 cp -rf ~/.config/nvim ../
 cp -rf ~/.config/dunst ../linux/

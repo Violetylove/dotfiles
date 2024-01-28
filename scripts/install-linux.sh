@@ -3,6 +3,9 @@
 
 cp -rf ../idea/.ideavimrc ~/.ideavimrc
 cp -rf ../vscode/.vscodevimrc ~/.vscodevimrc
+mkdir -p ~/.config/Code
+cp -rf ../vscode/settings.json ~/.config/Code/settings.json
+cp -rf ../vscode/keybindings.json ~/.config/Code/keybindings.json
 cp -rf ../git/.gitconfig ~/.gitconfig
 cp -rf ../nvim ~/.config
 cp -rf ../shell/alacritty ~/.config
