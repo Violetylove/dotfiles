@@ -1,7 +1,7 @@
 {
     // editor
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontFamily": "Maple Mono NF, Cascadia Code",
+    "editor.fontFamily": "Maple Mono NF",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
@@ -38,7 +38,7 @@
     "zenMode.hideLineNumbers": false,
     "security.workspace.trust.untrustedFiles": "open",
     // workbench
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.statusBar.visible": true,
     "workbench.startupEditor": "none",
     // 插件
@@ -117,7 +117,7 @@
         "<C-v>": false,
         "<C-f>": false
     },
-    "terminal.external.windowsExec": "pwsh.exe",
+    "terminal.external.windowsExec": "zsh",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },

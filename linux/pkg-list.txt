@@ -12,13 +12,12 @@
     * 中文，
     adobe-source-han-serif-cn-fonts wqy-zenhei 
     * 其他
-     ttf-font-awesome-pro ttf-material-design-icons-desktop-git ttf-ms-win11-auto-zh_cn 
+    ttf-ms-win11-auto-zh_cn 
     nerd fonts: 
-        ==> ttf-cascadiacode-nerd maple-mono-sc-nf ttf-jetbrains-mono-nerd ttf-iosevka-nerd ttf-meslo-nerd-font 
+        ==> ttf-cascadiacode-nerd maple-mono-nf ttf-jetbrains-mono-nerd ttf-meslo-nerd-font 
         ==> CaskaydiaCove Nerd Font
             Maple Mono NF
             JetBrains Mono Nerd Font
-            sevka Nerd Font
             MesloLGS NF
 * 输入法，fcitx5-im fcitx5-chinese-addons  fcitx5-nord fcitx5-rime rime-ice(具体配置查看官网)
 * 显示管理器，sddm

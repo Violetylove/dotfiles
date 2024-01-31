@@ -15,6 +15,6 @@ cp -rf ~/.config/i3 ../linux/
 cp -rf ~/.config/neofetch ../linux/
 cp -rf ~/.config/picom ../linux/
 cp -rf ~/.config/polybar ../linux/
-cp -rf /usr/share/sddm/themes ../linux/sddm/
-cp -rf /etc/sddm.conf ../linux/sddm/sddm.conf
+sudo cp -rf /usr/share/sddm/themes ../linux/sddm/
+sudo cp -rf /etc/sddm.conf ../linux/sddm/sddm.conf
 cp -rf ~/Pictures/backgrounds ../
