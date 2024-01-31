@@ -11,8 +11,8 @@ gaps:
 
 general:
   show_floating_on_top: true
-  cursor_follows_focus: true
-  focus_follows_cursor: true
+  cursor_follows_focus: false
+  focus_follows_cursor: false
   toggle_workspace_on_refocus: false
 
 bar:
