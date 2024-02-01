@@ -8,6 +8,7 @@ cp -rf ~/.ideavimrc ../idea/.ideavimrc
 cp -rf ~/.config/Code/User/settings.json ../vscode/settings.json 
 cp -rf ~/.config/Code/User/keybindings.json ../vscode/keybindings.json
 cp -rf ~/.vscodevimrc ../vscode/.vscodevimrc
+cp -rf ~/.config/alacritty ../shell/
 cp -rf ~/.config/nvim ../
 cp -rf ~/.config/dunst ../linux/
 cp -rf ~/.config/rofi ../linux/

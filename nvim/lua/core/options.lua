@@ -55,7 +55,7 @@ opt.foldlevel = 99
 
 
 -- neovide options
-vim.o.guifont = "Maple Mono NF:h10"
+vim.o.guifont = "Maple Mono NF:h9"
 
 -- 仅在neovide中生效的配置
 -- if vim.g.neovide then
