@@ -28,7 +28,7 @@ vim.bo.autoread = true
 
 -- 高亮当前行,列
 opt.cursorline = true
--- opt.cursorcolumn = true
+opt.cursorcolumn = true
 
 -- 启用鼠标
 opt.mouse:append("a")
@@ -59,5 +59,11 @@ vim.o.guifont = "Maple Mono NF:h9"
 
 -- 仅在neovide中生效的配置
 -- if vim.g.neovide then
---     vim.o.guifont = "Maple Mono NF:h10"
+-- vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme tokyonight-storm]])
+-- vim.cmd([[colorscheme onedark]])
+-- vim.cmd([[colorscheme hardhacker]])
+-- vim.cmd([[colorscheme rose-pine]])
+-- vim.cmd([[colorscheme everforest]])
+-- vim.cmd([[colorscheme catppuccin-mocha]])
 -- end

@@ -7,37 +7,8 @@ import = [
 # "~/.config/alacritty/themes/gruvbox_material.toml",
 ]
 
-[bell]
-animation = "EaseOutExpo"
-color = "#ffffff"
-duration = 1
-
 [colors]
 draw_bold_text_with_bright_colors = false
-
-[colors.cursor]
-cursor = "CellForeground"
-text = "CellBackground"
-
-[colors.footer_bar]
-background = "#c5c8c6"
-foreground = "#1d1f21"
-
-[colors.hints.end]
-background = "#1d1f21"
-foreground = "#e9ff5e"
-
-[colors.hints.start]
-background = "#e9ff5e"
-foreground = "#1d1f21"
-
-[colors.selection]
-background = "CellForeground"
-text = "CellBackground"
-
-[cursor.style]
-blinking = "On"
-shape = "Block"
 
 [font]
 builtin_box_drawing = true
@@ -62,9 +33,6 @@ style = "Regular"
 [font.offset]
 x = 0
 y = 0
-
-[hints]
-alphabet = "jfkdls;ahgurieowpq"
 
 [[keyboard.bindings]]
 action = "ClearLogNotice"
