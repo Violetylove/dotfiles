@@ -26,9 +26,7 @@ Copy-Item -Recurse -Force ..\git\.gitconfig ~\.gitconfig
 Copy-Item -Recurse -Force ..\vscode\.vscodevimrc ~\.vscodevimrc
 Copy-Item -Recurse -Force ..\windows\GlazeWM\config.yaml ~\.glaze-wm\config.yaml
 Copy-Item -Recurse -Force ..\windows\scoop\config.json ~\.config\scoop\config.json
-Copy-Item -Recurse -Force ..\shell\alacritty ~\AppData\Roaming\alacritty
+#Copy-Item -Recurse -Force ..\shell\alacritty ~\AppData\Roaming\alacritty
 Copy-Item -Recurse -Force ..\shell\power_shell\Microsoft.PowerShell_profile.ps1 ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-Copy-Item -Recurse -Force ..\nvim ~\AppData\Roaming
-
-
+Copy-Item -Recurse -Force ..\nvim ~\AppData\local
 
