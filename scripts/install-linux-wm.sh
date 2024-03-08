@@ -3,7 +3,7 @@
 
 cp -rf ../idea/.ideavimrc ~/.ideavimrc
 cp -rf ../vscode/.vscodevimrc ~/.vscodevimrc
-mkdir -p ~/.config/Code
+mkdir -p ~/.config/Code/User
 cp -rf ../vscode/settings.json ~/.config/Code/User/settings.json
 cp -rf ../vscode/keybindings.json ~/.config/Code/User/keybindings.json
 cp -rf ../git/.gitconfig ~/.gitconfig
