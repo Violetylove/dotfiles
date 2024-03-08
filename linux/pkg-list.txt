@@ -24,7 +24,7 @@
 * 窗口管理器，i3-wm polybar
 * 启动器，rofi
 * 通知，dunst
-* 截屏，scrot
+* 截屏，flameshot
 * 锁屏，i3lock-color xautolock
 * 特效，picom-ftlabs-git
 * 音频控件，pulseaudio
