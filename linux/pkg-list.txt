@@ -2,11 +2,11 @@
 * 壁纸 ，feh
 * 解压，ark
 * 图片查看器，gwenview
-* 视频播放器，mpv
-* 文件管理器，thunar
+* 视频播放器，mpv celluloid(一个更美观的mpv前端)
+* 文件管理器，thunar dolphin(个人比较喜欢后者)
 * 快照， timeshift
 * 剪切板，xclip copyq 
-* 音乐播放器，netease-cloud-music qqmusic-electron yesplaymusic 
+* 音乐播放器， qqmusic-electron yesplaymusic listen1-desktop
 * 字体，
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
     * 中文，
@@ -14,12 +14,11 @@
     * 其他
     ttf-ms-win11-auto-zh_cn 
     nerd fonts: 
-        ==> ttf-cascadiacode-nerd maple-mono-nf ttf-jetbrains-mono-nerd ttf-meslo-nerd-font 
+        ==> ttf-cascadia-code-nerd ttf-maple-nerd ttf-jetbrains-mono-nerd 
         ==> CaskaydiaCove Nerd Font
             Maple Mono NF
             JetBrains Mono Nerd Font
-            MesloLGS NF
-* 输入法，fcitx5-im fcitx5-chinese-addons  fcitx5-nord fcitx5-rime rime-ice(具体配置查看官网)
+* 输入法，fcitx5-im fcitx5-chinese-addons  fcitx5-nord fcitx5-rime rime-ice-git(具体配置查看官网)
 * 显示管理器，sddm
 * 窗口管理器，i3-wm polybar
 * 启动器，rofi
@@ -30,4 +29,4 @@
 * 音频控件，pulseaudio
 * 网络，network-manager-applet
 * 蓝牙，pulseaudio-bluetooth (蓝牙音频需要) blueman 或 rofi-bluetooth-git (后面这两个是前端，选其一)
-* 鼠标可视化，screenkey
+* 按键可视化，screenkey
