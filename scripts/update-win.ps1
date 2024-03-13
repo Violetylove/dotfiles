@@ -8,3 +8,4 @@ Copy-Item -Recurse -Force ~\.config\scoop\config.json ..\windows\scoop\config.js
 Copy-Item -Recurse -Force ~\AppData\local\nvim ..\
 Copy-Item -Recurse -Force ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1 ..\shell\power_shell\Microsoft.PowerShell_profile.ps1
 
+

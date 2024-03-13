@@ -18,7 +18,7 @@
         ==> CaskaydiaCove Nerd Font
             Maple Mono NF
             JetBrains Mono Nerd Font
-* 输入法，fcitx5-im fcitx5-chinese-addons  fcitx5-nord fcitx5-rime rime-ice-git(具体配置查看官网)
+* 输入法，fcitx5-im fcitx5-chinese-addons  fcitx5-nord fcitx5-rime rime-ice(具体配置查看官网)
 * 显示管理器，sddm
 * 窗口管理器，i3-wm polybar
 * 启动器，rofi
