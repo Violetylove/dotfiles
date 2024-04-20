@@ -1,0 +1,231 @@
+focus_borders:
+  active:
+    enabled: true
+    color: "#7ce38b"
+  inactive:
+    enabled: false
+
+gaps:
+  inner_gap: 10
+  outer_gap: 5
+
+general:
+  show_floating_on_top: true
+  cursor_follows_focus: false
+  focus_follows_cursor: false
+  toggle_workspace_on_refocus: false
+
+bar:
+  height: "30px"
+  position: "top"
+  always_on_top: true
+  opacity: 1.0
+  background: "#1c2128"
+  foreground: "#f0f6fc"
+  font_family: "JetBrainsMono Nerd Font Mono"
+  font_size: "13px"
+  padding: "4px 6px"
+  offset_x: "5"
+  offset_y: "5"
+  border_radius: "6"
+  border_color: "#343A41"
+  border_width: 1
+
+  components_left:
+    - type: "text"
+      text: " ATOVIO "
+      foreground: "#7ce48b"
+    - type: "workspaces"
+      focused_workspace_background: "#21262d"
+      focused_workspace_foreground: "#7ce48b"
+      displayed_workspace_background: "#21262d"
+      default_workspace_background: "transparent"
+      margin: "0px 10px 0px 0px"
+    - type: "cpu"
+      label: "<attr fs='20' fg='#7ce38b'></attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 1000
+    - type: "memory"
+      label: "<attr fs='20' fg='#7ce38b'></attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 1000
+
+  components_center:
+    - type: "window title"
+      foreground: "#ffffff"
+      padding: "0 8px"
+
+  components_right:
+    - type: "system tray"
+      padding: "4px 6px"
+      foreground: "#7ce38b"
+    # - type: "network"
+    #   foreground: "#7ce48b"
+    #   padding: "0 8px"
+    #   font_family: "JetBrainsMono Nerd Font Mono"
+    #   label_no_internet: ""
+    #   label_ethernet: "󰈁"
+    #   label_wifi_strength_0: "󰤯"
+    #   label_wifi_strength_25: "󰤟"
+    #   label_wifi_strength_50: "󰤢"
+    #   label_wifi_strength_75: "󰤥"
+    #   label_wifi_strength_100: "󰤨"
+    - type: "volume"
+      label: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      padding: "0 8px"
+      label_low: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_medium: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_high: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+      label_mute: "<attr fs='25' fg='#7ce38b'></attr>{volume_level}%"
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      foreground: "#7ce38b"
+      background: "#ffffff33"
+      margin: "0 4px"
+      padding: "0 8px"
+    - type: "weather"
+      latitude: 39.9178
+      longitude: 119.5472
+      label: "<attr fs='20' fg='#7ce38b'></attr>{temperature_celsius}°C"
+      label_sun: "<attr fs='20' fg='#7ce38b'>󰖙</attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='20' fg='#7ce38b'>󰖔</attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='20' fg='#7ce38b'>󰼱</attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='20' fg='#7ce38b'>󰖕</attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='20' fg='#7ce38b'>󰖖</attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='20' fg='#7ce38b'>󰼳</attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='20' fg='#7ce38b'>󰖖</attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='20' fg='#7ce38b'>󰖘</attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='20' fg='#7ce38b'>󰖓</attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='20' fg='#7ce38b'></attr>{temperature_celsius}°C"
+      margin: "0px 4px 0 4px"
+    - type: "binding mode"
+      background: "#ffffff33"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
+    - type: "clock"
+      foreground: "#7ce38b"
+      time_formatting: "hh:mm:ss tt  ddd MMM d  "
+      margin: "0 0 0 10px"
+
+workspaces:
+  - name: "1"
+    display_name: "壹"
+  - name: "2"
+    display_name: "贰"
+  - name: "3"
+    display_name: "叁"
+  - name: "4"
+    display_name: "肆"
+  - name: "5"
+    display_name: "伍"
+
+window_rules:
+  - command: "ignore"
+    match_process_name: "Taskmgr"
+
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  - command: "set floating"
+    match_process_name: "musicfox"
+
+  - command: "resize borders 0px -7px -7px -7px"
+    match_process_name: "steam"
+
+binding_modes:
+  - name: "resize"
+    keybindings:
+      - command: "resize width -2%"
+        bindings: ["H", "Left"]
+      - command: "resize width +2%"
+        bindings: ["L", "Right"]
+      - command: "resize height +2%"
+        bindings: ["K", "Up"]
+      - command: "resize height -2%"
+        bindings: ["J", "Down"]
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+
+keybindings:
+  - command: "focus left"
+    bindings: ["Alt+H", "Alt+Left"]
+  - command: "focus right"
+    bindings: ["Alt+L", "Alt+Right"]
+  - command: "focus up"
+    bindings: ["Alt+K", "Alt+Up"]
+  - command: "focus down"
+    bindings: ["Alt+J", "Alt+Down"]
+
+  - command: "move left"
+    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+  - command: "move right"
+    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+  - command: "move up"
+    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+  - command: "move down"
+    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+
+  - command: "resize width -2%"
+    binding: "Alt+A"
+  - command: "resize width +2%"
+    binding: "Alt+D"
+  - command: "resize height +2%"
+    binding: "Alt+W"
+  - command: "resize height -2%"
+    binding: "Alt+S"
+
+  - command: "binding mode resize"
+    binding: "Alt+R"
+
+  - command: "tiling direction toggle"
+    binding: "Alt+V"
+
+  - command: "focus mode toggle"
+    binding: "Alt+T"
+
+  - command: "toggle floating"
+    binding: "Alt+F"
+
+  - command: "toggle maximized"
+    binding: "Alt+X"
+
+  - command: "set minimized"
+    binding: "Alt+M"
+
+  - command: "close"
+    binding: "Alt+Shift+Q"
+
+  - command: "exit wm"
+    binding: "Alt+Shift+E"
+
+  - command: "reload config"
+    binding: "Alt+Shift+R"
+
+  - command: "exec wt"
+    binding: "Shift+Enter"
+
+  - command: "focus workspace recent"
+    binding: "Alt+Y"
+
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    binding: "Alt+Shift+5"

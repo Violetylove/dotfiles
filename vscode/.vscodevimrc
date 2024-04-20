@@ -1,0 +1,32 @@
+" =================================================================================================
+"            __        ___       _             __   __
+"            \ \      / (_)_ __ | |_ ___ _ __  \ \ / /   _  __ _ _ __
+"             \ \ /\ / /| | '_ \| __/ _ \ '__|  \ V / | | |/ _` | '_ \
+"              \ V  V / | | | | | ||  __/ |      | || |_| | (_| | | | |
+"               \_/\_/  |_|_| |_|\__\___|_|      |_| \__,_|\__,_|_| |_|
+" ==================================================================================================
+
+" 由于settings.json中设置某些Vim命令不方便，所以仅仅于Vim有关的的键位在此设置 
+
+inoremap jk <Esc> 
+
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>aq :qa<CR>
+
+nnoremap <leader>ap "0p
+
+noremap <leader>vs :vsp
+
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+nnoremap ; $
+vnoremap ; $
+
+nnoremap <leader>nl :nohl<CR>
+
+nnoremap H :bprevious<CR>
+nnoremap L :bnext<CR>

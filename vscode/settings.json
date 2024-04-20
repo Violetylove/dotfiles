@@ -1,0 +1,130 @@
+{
+    // editor
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "Maple Mono NF",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.tabSize": 4,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line",
+                    "comment.line.double-slash",
+                    "punctuation.definition.comment"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // extension
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "files.autoSave": "afterDelay",
+    "zenMode.hideLineNumbers": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    // workbench
+    "workbench.colorTheme": "Rosé Pine",
+    "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
+    // 插件
+    "gitlens.codeLens.enabled": false,
+    // liveServer
+    "liveServer.settings.donotShowInfoMsg": true,
+    // prettier
+    "prettier.bracketSameLine": true,
+    "prettier.tabWidth": 4,
+    "prettier.bracketSpacing": false,
+    "prettier.singleQuote": true,
+    // vscodevim
+    // vscodevim-option
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "white",
+    "vim.incsearch": true,
+    "vim.showmodename": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vscodevimrc",
+    // vscodevim-keymap
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["leader", "s"],
+            "commands": ["leap.findForward"]
+        },
+        {
+            "before": ["leader", "i"],
+            "commands": ["extension.toggleBool"]
+        },
+        {
+            "before": ["leader", "k"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["]", "d"],
+            "commands": ["editor.action.mark.next"]
+        },
+        {
+            "before": ["[", "d"],
+            "commands": ["editor.action.mark.prev"]
+        },
+        {
+            "before": ["leader", "c", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["leader", "c", "f"],
+            "commands": ["editor.action.formatDocument"],
+            "when": ["inputFocus && vim.mode == 'Normal'"]
+        },
+        {
+            "before": ["leader", "e"],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.files.action.focusFilesExplorer"
+            ]
+        },
+        {
+            "before": ["leader", "z"],
+            "commands": ["workbench.action.toggleZenMode"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-a>": false,
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-f>": false
+    },
+    "terminal.external.windowsExec": "zsh",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

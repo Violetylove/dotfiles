@@ -1,0 +1,246 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2024-04-20T16:26:04+08:00",
+            "Manifests": 1317
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2024-04-20T17:11:48+08:00",
+            "Manifests": 2010
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": "2024-04-14T01:12:39+08:00",
+            "Manifests": 336
+        },
+        {
+            "Name": "java",
+            "Source": "https://github.com/ScoopInstaller/Java",
+            "Updated": "2024-04-19T09:02:03+08:00",
+            "Manifests": 273
+        },
+        {
+            "Name": "go-musicfox",
+            "Source": "https://github.com/go-musicfox/go-musicfox.git",
+            "Updated": "2024-04-15T20:06:02+08:00",
+            "Manifests": 0
+        }
+    ],
+    "apps": [
+        {
+            "Name": "7zip",
+            "Updated": "2023-12-18T10:39:48.1474958+08:00",
+            "Version": "23.01",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "btop",
+            "Updated": "2023-12-18T10:44:03.0166421+08:00",
+            "Version": "1.0.4",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "cascadiacode-nf",
+            "Updated": "2024-04-15T18:42:52.8560546+08:00",
+            "Version": "3.2.1",
+            "Info": "",
+            "Source": "nerd-fonts"
+        },
+        {
+            "Name": "cmake",
+            "Updated": "2024-04-15T18:43:12.6396554+08:00",
+            "Version": "3.29.2",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "curl",
+            "Updated": "2024-04-15T18:43:19.2519102+08:00",
+            "Version": "8.7.1_7",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "dark",
+            "Updated": "2024-03-11T21:04:08.3449926+08:00",
+            "Version": "3.14",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "everything",
+            "Updated": "2023-12-18T10:44:16.6599839+08:00",
+            "Version": "1.4.1.1024",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Name": "flow-launcher",
+            "Updated": "2024-03-11T21:04:46.0569676+08:00",
+            "Version": "1.17.2",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Name": "git",
+            "Updated": "2023-12-18T21:29:17.9534998+08:00",
+            "Version": "2.43.0",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "glazewm",
+            "Updated": "2024-02-04T21:40:47.7428494+08:00",
+            "Version": "2.1.1",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Name": "go-musicfox",
+            "Updated": "2024-04-14T13:19:30.8049105+08:00",
+            "Version": "4.3.3",
+            "Info": "",
+            "Source": "go-musicfox"
+        },
+        {
+            "Name": "gradle",
+            "Updated": "2024-04-20T17:51:52.7428569+08:00",
+            "Version": "8.7",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "innounp",
+            "Updated": "2023-12-28T08:49:37.7786362+08:00",
+            "Version": "0.50",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "jetbrainsmono-nf-mono",
+            "Updated": "2024-04-15T18:43:34.196741+08:00",
+            "Version": "3.2.1",
+            "Info": "",
+            "Source": "nerd-fonts"
+        },
+        {
+            "Name": "kotlin",
+            "Updated": "2024-04-20T17:28:16.2383586+08:00",
+            "Version": "1.9.23",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "kotlin-native",
+            "Updated": "2024-04-20T17:28:24.1131289+08:00",
+            "Version": "1.9.23",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "make",
+            "Updated": "2023-12-18T21:29:41.1241741+08:00",
+            "Version": "4.4.1",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "maple-mono-nf",
+            "Updated": "2023-12-18T10:44:44.5649103+08:00",
+            "Version": "6.4",
+            "Info": "",
+            "Source": "nerd-fonts"
+        },
+        {
+            "Name": "maven",
+            "Updated": "2023-12-18T21:29:00.628262+08:00",
+            "Version": "3.9.6",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "mysql",
+            "Updated": "2023-12-20T10:52:12.8206803+08:00",
+            "Version": "8.2.0",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "neofetch",
+            "Updated": "2023-12-18T10:45:49.0115301+08:00",
+            "Version": "7.1.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "nodejs-lts",
+            "Updated": "2023-12-18T17:36:40.4972957+08:00",
+            "Version": "20.10.0",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "oh-my-posh",
+            "Updated": "2024-04-14T13:18:59.304538+08:00",
+            "Version": "19.20.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "openjdk17",
+            "Updated": "2023-12-18T17:36:19.8921541+08:00",
+            "Version": "17.0.2-8",
+            "Info": "Held package",
+            "Source": "java"
+        },
+        {
+            "Name": "openjdk21",
+            "Updated": "2023-12-18T17:36:23.0075201+08:00",
+            "Version": "21.0.1-12",
+            "Info": "Held package",
+            "Source": "java"
+        },
+        {
+            "Name": "potplayer",
+            "Updated": "2023-12-18T17:37:14.7523371+08:00",
+            "Version": "231102",
+            "Info": "Held package",
+            "Source": "extras"
+        },
+        {
+            "Name": "pwsh",
+            "Updated": "2024-04-15T18:50:00.3945142+08:00",
+            "Version": "7.4.2",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "python",
+            "Updated": "2023-12-18T21:28:44.3971809+08:00",
+            "Version": "3.12.1",
+            "Info": "Held package",
+            "Source": "main"
+        },
+        {
+            "Name": "sudo",
+            "Updated": "2023-12-18T10:47:21.3127164+08:00",
+            "Version": "0.2020.01.26",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Name": "tomcat",
+            "Updated": "2023-12-18T21:28:23.1046316+08:00",
+            "Version": "10.1.17",
+            "Info": "Held package",
+            "Source": "extras"
+        }
+    ]
+}

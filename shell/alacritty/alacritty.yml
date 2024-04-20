@@ -1,0 +1,265 @@
+# import:
+# - "~/.config/alacritty/themes/everforest_dark.toml"
+#  - /path/to/alacritty.yml
+# env:
+#   TERM: alacritty
+window:
+  dimensions:
+    columns: 140
+    lines: 35
+  position:
+    x: 180
+    y: 90
+  padding:
+    x: 10
+    y: 10
+  dynamic_padding: false
+  # - full: Borders and title bar
+  # - none: Neither borders nor title bar
+  decorations: none
+  opacity: 1.0
+  # - Windowed
+  # - Maximized
+  # - Fullscreen
+  startup_mode: Windowed
+  title: Alacritty
+  dynamic_title: true
+  # decorations.`Dark`, `Light`, and `None`
+  decorations_theme_variant: Dark
+  resize_increments: false
+
+scrolling:
+  history: 10000
+  multiplier: 20
+
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font
+    style: Regular
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Italic
+  bold_italic:
+    family: CaskaydiaCove Nerd Font
+    style: Bold Italic
+  size: 12.0
+  offset:
+    x: 0
+    y: 0
+  builtin_box_drawing: true
+
+draw_bold_text_with_bright_colors: false
+
+colors:
+  #### 默认值 ####
+  # primary:
+  #   background: "#1d1f21"
+  #   foreground: "#c5c8c6"
+  # normal:
+  #   black: "#1d1f21"
+  #   red: "#cc6666"
+  #   green: "#b5bd68"
+  #   yellow: "#f0c674"
+  #   blue: "#81a2be"
+  #   magenta: "#b294bb"
+  #   cyan: "#8abeb7"
+  #   white: "#c5c8c6"
+  # bright:
+  #   black: "#666666"
+  #   red: "#d54e53"
+  #   green: "#b9ca4a"
+  #   yellow: "#e7c547"
+  #   blue: "#7aa6da"
+  #   magenta: "#c397d8"
+  #   cyan: "#70c0b1"
+  #   white: "#eaeaea"
+
+  #### everforest_dark ####
+  primary:
+    background: "#2d353b"
+    foreground: "#d3c6aa"
+  normal:
+    black: "#475258"
+    red: "#e67e80"
+    green: "#a7c080"
+    yellow: "#dbbc7f"
+    blue: "#7fbbb3"
+    magenta: "#d699b6"
+    cyan: "#83c092"
+    white: "#d3c6aa"
+  bright:
+    black: "#475258"
+    red: "#e67e80"
+    green: "#a7c080"
+    yellow: "#dbbc7f"
+    blue: "#7fbbb3"
+    magenta: "#d699b6"
+    cyan: "#83c092"
+    white: "#d3c6aa"
+
+  # Allowed values are CellForeground/CellBackground, which reference the
+  # affected cell, or hexadecimal colors like #ff00ff.
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+  # Keyboard hints
+  hints:
+    start:
+      foreground: "#1d1f21"
+      background: "#e9ff5e"
+    end:
+      foreground: "#e9ff5e"
+      background: "#1d1f21"
+  footer_bar:
+    background: "#c5c8c6"
+    foreground: "#1d1f21"
+  selection:
+    text: CellBackground
+    background: CellForeground
+
+#transparent_background_colors: false
+
+# Bell
+bell:
+  # Values for `animation`:
+  #   - Ease
+  #   - EaseOut
+  #   - EaseOutSine
+  #   - EaseOutQuad
+  #   - EaseOutCubic
+  #   - EaseOutQuart
+  #   - EaseOutQuint
+  #   - EaseOutExpo
+  #   - EaseOutCirc
+  #   - Linear
+  animation: EaseOutExpo
+  duration: 1
+  color: "#ffffff"
+
+  # Bell Command
+  command:
+    program: notify-send
+    args: ["Hello, World!"]
+  #command: None
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+# When set to `true`, selected text will be copied to the primary clipboard.
+save_to_clipboard: true
+
+cursor:
+  style:
+    #   - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+    # 光标闪烁
+    #   - Never: Prevent the cursor from ever blinking
+    #   - Off: Disable blinking by default
+    #   - On: Enable blinking by default
+    #   - Always: Force the cursor to always blink
+    blinking: On
+
+# Vi mode cursor style
+vi_mode_style: None
+
+blink_interval: 750
+live_config_reload: true
+
+shell:
+  # program: /usr/bin/zsh
+  program: pwsh
+  args:
+    - --nologo
+  # working_directory: "D:"
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: false
+
+# Hints
+hints:
+  alphabet: "jfkdls;ahgurieowpq"
+# Mouse bindings
+mouse_bindings:
+  # ExpandSelection,表示扩展选中
+  - { mouse: Right, action: ExpandSelection }
+
+# Key bindings
+# - `action`: Execute a predefined action
+#
+#   - ToggleViMode
+#   - SearchForward
+#   - SearchBackward
+#   - Copy
+#   - Paste
+#   - IncreaseFontSize
+#   - DecreaseFontSize
+#   - ResetFontSize
+#   - ScrollPageUp
+#   - ScrollPageDown
+#   - ScrollToTop
+#   - ScrollToBottom
+#   - ClearHistory
+#       Remove the terminal's scrollback history.
+#   - Hide
+#       Hide the Alacritty window.
+#   - Minimize
+#       Minimize the Alacritty window.
+#   - ToggleFullscreen
+#   - ToggleMaximized
+#   - SpawnNewInstance
+#       Spawn a new instance of Alacritty.
+#   - ClearLogNotice
+#   - ClearSelection
+#       Remove the active selection.
+#   - ReceiveChar
+#   - None
+#
+# - Linux/BSD exclusive actions:
+#   - CopySelection
+#       Copy from the selection buffer.
+#   - PasteSelection
+#       Paste from the selection buffer.
+#
+# - `command`: Fork and execute a specified command plus arguments
+#       `{ program: "alacritty", args: ["-e", "vttest"] }`
+#
+# And optionally:
+# - `mods`: Key modifiers to filter binding actions
+#    - Command
+#    - Control
+#    - Option
+#    - Super
+#    - Shift
+#    - Alt
+#
+# - `mode`: Indicate a binding for only specific terminal reported modes
+#    - AppCursor
+#    - AppKeypad
+#    - Search
+#    - Alt
+#    - Vi
+key_bindings:
+  - { key: L, mods: Control, action: ClearLogNotice }
+  - { key: PageUp, mods: Shift, mode: ~Alt, action: ScrollPageUp }
+  - { key: PageDown, mods: Shift, mode: ~Alt, action: ScrollPageDown }
+  - { key: Home, mods: Shift, mode: ~Alt, action: ScrollToTop }
+  - { key: End, mods: Shift, mode: ~Alt, action: ScrollToBottom }
+  - { key: W, mods: Alt|Shift, action: CreateNewWindow }
+  - { key: Q, mods: Alt|Shift, action: Quit }
+  - { key: V, mods: Alt|Shift, action: ToggleViMode }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
+  - { key: Return, mods: Alt, action: ToggleFullscreen }
+
+  - { key: Paste, action: None }
+  - { key: Copy, action: None }
+  - { key: Insert, mods: Shift, action: None }
+
+log_level: Warn
