@@ -1,3 +1,4 @@
+-- But the dropbar.nvim only for nvim v.0.10
 if true then
 	return {}
 end

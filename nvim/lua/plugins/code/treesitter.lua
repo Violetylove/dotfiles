@@ -12,10 +12,10 @@ return {
                 'cpp',
                 'lua',
                 'markdown',
-                'python',
+                -- 'python',
                 'html',
                 'javascript',
-                'css',
+                -- 'css',
             },
             highlight = { enable = true },
             indent = {

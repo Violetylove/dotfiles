@@ -12,7 +12,7 @@ return {
             -- table值为每个server的设置
             -- clangd = {},
             -- html = {},
-            lemminx = {},
+            -- lemminx = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
@@ -20,7 +20,7 @@ return {
                 },
             },
             marksman = {},
-            tsserver = {},
+            -- tsserver = {},
         }
 
         -- cmp设置

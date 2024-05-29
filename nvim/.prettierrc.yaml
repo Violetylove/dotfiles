@@ -8,4 +8,4 @@ bracketSameLine: true
 #     bracketSameLine: false
 #     printWidth: 80
 printwidth: 120
-tabwidth: 4
+tabwidth: 2
