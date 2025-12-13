@@ -19,116 +19,81 @@ Import-Module Terminal-Icons
 Import-Module z
 
 ###################### aliases #########################
-Set-Alias v nvim
 Set-Alias s scoop
+Set-Alias v nvim
+Set-Alias y yarn
 
 ###################### functions #########################
-function .. ()
-{
-    Set-Location ..
-}
-function et
-{ 
-    exit 
-}
+function .. { Set-Location .. }
+function et { exit }
 #### git ####
-function gcl
-{
+function gca { git commit --amend }
+function gcm { git commit -m "$args" }
+function gst { git status }
+function gpr { git config --global http.proxy localhost:7890 }
+function gupr { git config --global --unset http.proxy }
+function gcl {
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(
+	    Mandatory=$true,
+	    HelpMessage = "请输入克隆地址"
+	)]
         [string]$url
     )
     git clone $url
 }
-function gst ()
-{
-    git status
-}
-function gcmt
-{
+function ga {
     param (
-        [Parameter(Mandatory=$true)]
-        [string]$msg
-    )
-    git commit -m $msg
-}
-function ga
-{
-    param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(
+	    Mandatory=$true,
+	    HelpMessage = "请输入提交文件"
+	)]
         [string]$fileName
     )
     git add $fileName
 }
-function gaa
-{
-    git add --all
-}
-function gpr
-{
-    git config --global http.proxy localhost:7890
-}
-function gupr
-{
-    git config --global --unset http.proxy 
-}
 
 #### Scoop ####
-function spr
-{
-    scoop config proxy localhost:7890
-}
-function supr
-{
-    scoop config rm proxy 
-}
-# scoop安装函数
-function sis
-{
+function spr { scoop config proxy localhost:7890 }
+function supr { scoop config rm proxy }
+function sis {
     param (
         [Parameter(Mandatory=$true)] # 表示此参数是必需的
         [string]$AppName
     )
     scoop install $AppName
 }
-# scoop卸载函数
-function sui
-{
+function sui {
     param (
         [Parameter(Mandatory=$true)] # 表示此参数是必需的
         [string]$AppName
     )
     scoop uninstall $AppName
 }
-# scoop更新函数
-function sud
-{
+function sud {
     param (
         [string]$AppName
     )
     scoop update $AppName
 }
-# scoop搜索函数
-function ssc
-{
+function ssc {
     param (
         [Parameter(Mandatory=$true)] # 表示此参数是必需的
         [string]$AppName
     )
     scoop search $AppName
 }
+# yarn
+function ya { yarn add @args }
+function yad { yarn add --dev @args }
+function yr { yarn remove @args }
+function yi { yarn install @args }
+function yd { yarn dev @args }
+function yb { yarn build @args }
+function ys { yarn start @args }
+function yup { yarn upgrade @args }
 #################### on-my-posh  #######################
-oh-my-posh init pwsh --config 'D:\WinterVInstall\Scoop\apps\oh-my-posh\current\themes\multiverse-neon.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'C:\Users\ayana\winter-install\scoop\apps\oh-my-posh\current\themes\multiverse-neon.omp.json' | Invoke-Expression
 # 主题
 # emodipt-extend
 # multiverse-neon
-
-###################### musicfox ########################
-Set-Alias -Name wyy -Value musicfox
-
-
-
-
-
-
-
