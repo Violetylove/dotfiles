@@ -65,7 +65,7 @@ return {
 
       -- file explorer
       maps.n["<Leader>e"] = function() require("vscode").action("workbench.files.action.focusFilesExplorer") end
-      maps.n["<Leader>o"] = function() require("vscode").action("workbench.action.focusActiveEditorGroup") end
+      -- maps.n["<Leader>o"] = function() require("vscode").action("workbench.action.focusActiveEditorGroup") end
 
       -- indentation
       maps.v["<Tab>"] = function() require("vscode").action("editor.action.indentLines") end
