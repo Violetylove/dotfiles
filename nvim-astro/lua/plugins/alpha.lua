@@ -2,7 +2,7 @@ return {
   "goolord/alpha-nvim",
   event = "VimEnter",
   opts = function()
-    local dashboard = require "alpha.themes.dashboard"
+    local dashboard = require("alpha.themes.dashboard")
     dashboard.section.header.val = {
       [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
       [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
@@ -30,7 +30,7 @@ return {
       -- dashboard.button('n', ' ' .. ' New file', '<cmd>ene <BAR> startinsert <CR>'),
       dashboard.button("r", " " .. " Recent files", '<cmd>:lua require("snacks").picker.recent()<CR>'),
       dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-      dashboard.button("s", " " .. " Restore Session", "<cmd>:lua require('persistence').load() <cr>"),
+      dashboard.button("s", " " .. " Restore Session", '<cmd>:lua require("resession").load "Last Session"<cr>'),
       dashboard.button("l", "󰒲 " .. " Lazy", "<cmd>Lazy<CR>"),
       dashboard.button("q", " " .. " Quit", "<cmd>qa<CR>"),
     }

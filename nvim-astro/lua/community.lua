@@ -8,6 +8,8 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.editing-support.yanky-nvim" },
+  { import = "astrocommunity.editing-support.multicursors-nvim" },
   { import = "astrocommunity.file-explorer.telescope-file-browser-nvim" },
   -- { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
@@ -17,5 +19,4 @@ return {
   -- { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.recipes.neovide" },
-  -- { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
 }

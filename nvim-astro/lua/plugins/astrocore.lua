@@ -22,6 +22,8 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         clipboard = "unnamedplus",
+        listchars = "tab:▸ ,trail:·",
+        list = true,
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
