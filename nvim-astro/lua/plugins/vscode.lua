@@ -1,7 +1,8 @@
 if not vim.g.vscode then return {} end -- don't do anything in non-vscode instances
 
+local vscode = require("vscode")
 -- Set `vim.notify` to VS Code notifications
-vim.notify = require("vscode").notify
+vim.notify = vscode.notify
 
 local enabled = {}
 vim.tbl_map(function(plugin) enabled[plugin] = true end, {
@@ -39,72 +40,70 @@ return {
       local maps = assert(opts.mappings)
 
       -- basic actions
-      maps.n["<Leader>q"] = function() require("vscode").action("workbench.action.closeWindow") end
-      maps.n["<Leader>w"] = function() require("vscode").action("workbench.action.files.save") end
-      maps.n["<Leader>n"] = function() require("vscode").action("welcome.showNewFileEntries") end
+      maps.n["<Leader>q"] = function() vscode.action("workbench.action.closeWindow") end
+      maps.n["<Leader>w"] = function() vscode.action("workbench.action.files.save") end
+      maps.n["<Leader>n"] = function() vscode.action("welcome.showNewFileEntries") end
 
       -- splits navigation
-      maps.n["|"] = function() require("vscode").action("workbench.action.splitEditor") end
-      maps.n["\\"] = function() require("vscode").action("workbench.action.splitEditorDown") end
-      maps.n["<C-H>"] = function() require("vscode").action("workbench.action.navigateLeft") end
-      maps.n["<C-J>"] = function() require("vscode").action("workbench.action.navigateDown") end
-      maps.n["<C-K>"] = function() require("vscode").action("workbench.action.navigateUp") end
-      maps.n["<C-L>"] = function() require("vscode").action("workbench.action.navigateRight") end
+      maps.n["|"] = function() vscode.action("workbench.action.splitEditor") end
+      maps.n["\\"] = function() vscode.action("workbench.action.splitEditorDown") end
+      maps.n["<C-H>"] = function() vscode.action("workbench.action.navigateLeft") end
+      maps.n["<C-J>"] = function() vscode.action("workbench.action.navigateDown") end
+      maps.n["<C-K>"] = function() vscode.action("workbench.action.navigateUp") end
+      maps.n["<C-L>"] = function() vscode.action("workbench.action.navigateRight") end
 
       -- terminal
-      maps.n["<F7>"] = function() require("vscode").action("workbench.action.terminal.toggleTerminal") end
-      maps.n["<C-'>"] = function() require("vscode").action("workbench.action.terminal.toggleTerminal") end
+      maps.n["<F7>"] = function() vscode.action("workbench.action.terminal.toggleTerminal") end
+      maps.n["<C-'>"] = function() vscode.action("workbench.action.terminal.toggleTerminal") end
 
       -- buffer management
       maps.n["]b"] = "<Cmd>Tabnext<CR>"
       maps.n["[b"] = "<Cmd>Tabprevious<CR>"
       maps.n["<Leader>c"] = "<Cmd>Tabclose<CR>"
-      maps.n["<Leader>C"] = "<Cmd>Tabclose!<CR>"
-      maps.n["<Leader>bc"] = function() require("vscode").action("workbench.action.closeOtherEditors") end
+      -- maps.n["<Leader>C"] = "<Cmd>Tabclose!<CR>"
+      maps.n["<Leader>bc"] = function() vscode.action("workbench.action.closeOtherEditors") end
       maps.n["<Leader>bp"] = "<Cmd>Tablast<CR>"
 
       -- file explorer
-      maps.n["<Leader>e"] = function() require("vscode").action("workbench.files.action.focusFilesExplorer") end
-      -- maps.n["<Leader>o"] = function() require("vscode").action("workbench.action.focusActiveEditorGroup") end
+      maps.n["<Leader>e"] = function() vscode.action("workbench.files.action.focusFilesExplorer") end
+      -- maps.n["<Leader>o"] = function() vscode.action("workbench.action.focusActiveEditorGroup") end
 
       -- indentation
-      maps.v["<Tab>"] = function() require("vscode").action("editor.action.indentLines") end
-      maps.v["<S-Tab>"] = function() require("vscode").action("editor.action.outdentLines") end
+      -- maps.v["<Tab>"] = function() vscode.action("editor.action.indentLines") end
+      -- maps.v["<S-Tab>"] = function() vscode.action("editor.action.outdentLines") end
 
       -- diagnostics
-      maps.n["]d"] = function() require("vscode").action("editor.action.marker.nextInFiles") end
-      maps.n["[d"] = function() require("vscode").action("editor.action.marker.prevInFiles") end
+      maps.n["]d"] = function() vscode.action("editor.action.marker.nextInFiles") end
+      maps.n["[d"] = function() vscode.action("editor.action.marker.prevInFiles") end
 
       -- pickers (emulate telescope mappings)
-      maps.n["<Leader>fc"] = function()
-        require("vscode").action("workbench.action.findInFiles", { args = { query = vim.fn.expand("<cword>") } })
-      end
-      maps.n["<Leader>fC"] = function() require("vscode").action("workbench.action.showCommands") end
-      maps.n["<Leader>ff"] = function() require("vscode").action("workbench.action.quickOpen") end
-      maps.n["<Leader>fn"] = function() require("vscode").action("notifications.showList") end
-      maps.n["<Leader>fo"] = function() require("vscode").action("workbench.action.openRecent") end
-      maps.n["<Leader>ft"] = function() require("vscode").action("workbench.action.selectTheme") end
-      maps.n["<Leader>fw"] = function() require("vscode").action("workbench.action.findInFiles") end
-      maps.n["<Leader>fb"] = function() require("vscode").action("workbench.action.showEditorsInGroup") end
+      -- maps.n["<Leader>fc"] = function()
+      --   vscode.action("workbench.action.findInFiles", { args = { query = vim.fn.expand("<cword>") } })
+      -- end
+      maps.n["<Leader>fC"] = function() vscode.action("workbench.action.showCommands") end
+      maps.n["<Leader>ff"] = function() vscode.action("workbench.action.quickOpen") end
+      maps.n["<Leader>fn"] = function() vscode.action("notifications.showList") end
+      maps.n["<Leader>fo"] = function() vscode.action("workbench.action.openRecent") end
+      maps.n["<Leader>ft"] = function() vscode.action("workbench.action.selectTheme") end
+      maps.n["<Leader>fw"] = function() vscode.action("workbench.action.findInFiles") end
+      maps.n["<Leader>fb"] = function() vscode.action("workbench.action.showEditorsInGroup") end
 
       -- git client
-      maps.n["<Leader>gg"] = function() require("vscode").action("workbench.view.scm") end
+      maps.n["<Leader>gg"] = function() vscode.action("workbench.view.scm") end
 
       -- LSP Mappings
-      maps.n["K"] = function() require("vscode").action("editor.action.showHover") end
-      maps.n["gI"] = function() require("vscode").action("editor.action.goToImplementation") end
-      maps.n["gd"] = function() require("vscode").action("editor.action.revealDefinition") end
-      maps.n["gD"] = function() require("vscode").action("editor.action.revealDeclaration") end
-      maps.n["gr"] = function() require("vscode").action("editor.action.goToReferences") end
-      maps.n["gy"] = function() require("vscode").action("editor.action.goToTypeDefinition") end
-      maps.n["<Leader>la"] = function() require("vscode").action("editor.action.quickFix") end
-      maps.n["<Leader>lG"] = function() require("vscode").action("workbench.action.showAllSymbols") end
-      maps.n["<Leader>lR"] = function() require("vscode").action("editor.action.goToReferences") end
-      maps.n["<Leader>lr"] = function() require("vscode").action("editor.action.rename") end
-      maps.n["<Leader>ls"] = function() require("vscode").action("workbench.action.gotoSymbol") end
-      maps.n["<Leader>lf"] = function() require("vscode").action("editor.action.formatDocument") end
+      maps.n["K"] = function() vscode.action("editor.action.showHover") end
+      maps.n["gI"] = function() vscode.action("editor.action.goToImplementation") end
+      maps.n["gd"] = function() vscode.action("editor.action.revealDefinition") end
+      maps.n["gD"] = function() vscode.action("editor.action.revealDeclaration") end
+      maps.n["gr"] = function() vscode.action("editor.action.goToReferences") end
+      maps.n["gy"] = function() vscode.action("editor.action.goToTypeDefinition") end
+      maps.n["<Leader>la"] = function() vscode.action("editor.action.quickFix") end
+      maps.n["<Leader>lG"] = function() vscode.action("workbench.action.showAllSymbols") end
+      maps.n["<Leader>lR"] = function() vscode.action("editor.action.goToReferences") end
+      maps.n["<Leader>lr"] = function() vscode.action("editor.action.rename") end
+      maps.n["<Leader>ls"] = function() vscode.action("workbench.action.gotoSymbol") end
+      maps.n["<Leader>lf"] = function() vscode.action("editor.action.formatDocument") end
     end,
   },
-  -- disable treesitter highlighting
-  { "nvim-treesitter/nvim-treesitter", opts = { highlight = { enable = false } } },
 }
