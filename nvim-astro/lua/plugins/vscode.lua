@@ -43,6 +43,7 @@ return {
       maps.n["<Leader>q"] = function() vscode.action("workbench.action.closeWindow") end
       maps.n["<Leader>w"] = function() vscode.action("workbench.action.files.save") end
       maps.n["<Leader>n"] = function() vscode.action("welcome.showNewFileEntries") end
+      maps.n["<Leader>z"] = function() vscode.action("workbench.action.toggleZenMode") end
 
       -- splits navigation
       maps.n["|"] = function() vscode.action("workbench.action.splitEditor") end
@@ -68,18 +69,11 @@ return {
       maps.n["<Leader>e"] = function() vscode.action("workbench.files.action.focusFilesExplorer") end
       -- maps.n["<Leader>o"] = function() vscode.action("workbench.action.focusActiveEditorGroup") end
 
-      -- indentation
-      -- maps.v["<Tab>"] = function() vscode.action("editor.action.indentLines") end
-      -- maps.v["<S-Tab>"] = function() vscode.action("editor.action.outdentLines") end
-
       -- diagnostics
       maps.n["]d"] = function() vscode.action("editor.action.marker.nextInFiles") end
       maps.n["[d"] = function() vscode.action("editor.action.marker.prevInFiles") end
 
       -- pickers (emulate telescope mappings)
-      -- maps.n["<Leader>fc"] = function()
-      --   vscode.action("workbench.action.findInFiles", { args = { query = vim.fn.expand("<cword>") } })
-      -- end
       maps.n["<Leader>fC"] = function() vscode.action("workbench.action.showCommands") end
       maps.n["<Leader>ff"] = function() vscode.action("workbench.action.quickOpen") end
       maps.n["<Leader>fn"] = function() vscode.action("notifications.showList") end

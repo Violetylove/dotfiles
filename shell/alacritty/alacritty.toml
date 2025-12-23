@@ -1,18 +1,33 @@
+[general]
+working_directory = "C:/Users/ayana/"
 live_config_reload = true
 import = [
-#"~/.config/alacritty/themes/everforest_dark.toml",
-#"~/.config/alacritty/themes/tokyo-night.toml",
-# "~/.config/alacritty/themes/catppuccin.toml",
-"~/.config/alacritty/themes/catppuccin.toml",
-# "~/.config/alacritty/themes/gruvbox_material.toml",
+  "./themes/everforest_dark.toml",
+  # "./themes/tokyo-night.toml",
+  # "./themes/catppuccin.toml",
+  # "./themes/",
+  # "./themes/gruvbox_material.toml",
 ]
+
+[bell]
+animation = "EaseOutExpo"
+color = "#ffffff"
+duration = 1
 
 [colors]
 draw_bold_text_with_bright_colors = false
 
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 750
+vi_mode_style = "None"
+
+[debug]
+log_level = "Warn"
+
 [font]
 builtin_box_drawing = true
-size = 9.0
+size = 12.0
 
 [font.bold]
 family = "CaskaydiaCove Nerd Font"
@@ -34,10 +49,8 @@ style = "Regular"
 x = 0
 y = 0
 
-[[keyboard.bindings]]
-action = "ClearLogNotice"
-key = "L"
-mods = "Control"
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
 
 [[keyboard.bindings]]
 action = "ScrollPageUp"
@@ -74,11 +87,6 @@ key = "Q"
 mods = "Alt|Shift"
 
 [[keyboard.bindings]]
-action = "ToggleViMode"
-key = "V"
-mods = "Alt|Shift"
-
-[[keyboard.bindings]]
 action = "Paste"
 key = "V"
 mods = "Control"
@@ -106,41 +114,36 @@ action = "None"
 key = "Insert"
 mods = "Shift"
 
+[terminal]
+
 [mouse]
 hide_when_typing = false
-
-[[mouse.bindings]]
-action = "ExpandSelection"
-mouse = "Right"
+bindings = [{ mouse = "Right", action = "ExpandSelection" }]
 
 [scrolling]
 history = 10000
 multiplier = 20
 
 [selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+semantic_escape_chars = """,│`|:"' ()[]{}<>\t"""
+save_to_clipboard = true
 
-[shell]
-program = "zsh"
+[terminal.shell]
+args = ["--nologo"]
+program = "pwsh"
+# program = "zsh"
 
 [window]
-decorations = "none"
+# decorations = "None"                       # "Full" | "None" | "Transparent" | "Buttonless"
 decorations_theme_variant = "Dark"
-dynamic_padding = false
-dynamic_title = true
-opacity = 1.0
+dynamic_padding = true
+dynamic_title = false
+opacity = 0.8
 resize_increments = false
 startup_mode = "Windowed"
 title = "Alacritty"
+dimensions = { columns = 140, lines = 35 }
+padding = { x = 5, y = 5 }
+position = { x = 450, y = 250 }
 
-[window.dimensions]
-columns = 140
-lines = 35
-
-[window.padding]
-x = 10
-y = 10
-
-[window.position]
-x = 180
-y = 90
+[keyboard]

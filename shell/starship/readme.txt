@@ -1,0 +1,1 @@
+Copy the config file you like to ``~/.config/starship.toml``.

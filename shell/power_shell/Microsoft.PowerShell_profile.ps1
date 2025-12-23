@@ -19,16 +19,19 @@ Import-Module Terminal-Icons
 Import-Module z
 
 ###################### aliases #########################
+Set-Alias clg clang
+Set-Alias cl+ clang++
 Set-Alias s scoop
 Set-Alias v nvim
+Set-Alias gnv neovide
 Set-Alias y yarn
 
 ###################### functions #########################
 function .. { Set-Location .. }
 function et { exit }
 #### git ####
-function gca { git commit --amend }
-function gcm { git commit -m "$args" }
+function cma { git commit --amend }
+function cmt { git commit -m @args }
 function gst { git status }
 function gpr { git config --global http.proxy localhost:7890 }
 function gupr { git config --global --unset http.proxy }
@@ -92,8 +95,11 @@ function yd { yarn dev @args }
 function yb { yarn build @args }
 function ys { yarn start @args }
 function yup { yarn upgrade @args }
-#################### on-my-posh  #######################
-oh-my-posh init pwsh --config 'C:\Users\ayana\winter-install\scoop\apps\oh-my-posh\current\themes\multiverse-neon.omp.json' | Invoke-Expression
-# 主题
+#################### 主题  #######################
+# oh-my-posh
 # emodipt-extend
 # multiverse-neon
+# oh-my-posh init pwsh --config 'C:\Users\ayana\winter-install\scoop\apps\oh-my-posh\current\themes\emodipt-extend.omp.json' | Invoke-Expression
+#
+# starship
+Invoke-Expression (&starship init powershell)
