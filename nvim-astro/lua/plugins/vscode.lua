@@ -15,7 +15,7 @@ vim.tbl_map(function(plugin) enabled[plugin] = true end, {
   -- more known working
   "flash.nvim",
   "mini.surround",
-  "yanky.nvim",
+  -- "yanky.nvim",
   "nvim-spider",
   -- feel free to open PRs to add more support!
 })
@@ -42,7 +42,7 @@ return {
       -- basic actions
       maps.n["<Leader>q"] = function() vscode.action("workbench.action.closeWindow") end
       maps.n["<Leader>w"] = function() vscode.action("workbench.action.files.save") end
-      maps.n["<Leader>n"] = function() vscode.action("welcome.showNewFileEntries") end
+      -- maps.n["<Leader>n"] = function() vscode.action("welcome.showNewFileEntries") end
       maps.n["<Leader>z"] = function() vscode.action("workbench.action.toggleZenMode") end
 
       -- splits navigation
@@ -58,8 +58,8 @@ return {
       maps.n["<C-'>"] = function() vscode.action("workbench.action.terminal.toggleTerminal") end
 
       -- buffer management
-      maps.n["]b"] = "<Cmd>Tabnext<CR>"
-      maps.n["[b"] = "<Cmd>Tabprevious<CR>"
+      maps.n["<Tab>"] = "<Cmd>Tabnext<CR>"
+      maps.n["<S-Tab>"] = "<Cmd>Tabprevious<CR>"
       maps.n["<Leader>c"] = "<Cmd>Tabclose<CR>"
       -- maps.n["<Leader>C"] = "<Cmd>Tabclose!<CR>"
       maps.n["<Leader>bc"] = function() vscode.action("workbench.action.closeOtherEditors") end

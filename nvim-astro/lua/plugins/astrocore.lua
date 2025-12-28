@@ -22,13 +22,15 @@ return {
       opt = { -- vim.opt.<key>
         relativenumber = true, -- sets vim.opt.relativenumber
         clipboard = "unnamedplus",
-        listchars = "tab:▸ ,trail:·",
         list = true,
+        listchars = {
+          space = "·",
+        },
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
-        guifont = "Maple Mono NF:h12",
+        guifont = "Maple Mono NF CN:h12",
       },
       g = { -- vim.g.<key>
       },
@@ -42,8 +44,8 @@ return {
         ["<Leader>ap"] = { '"0p', desc = "Paste Yanked" },
 
         -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<Tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<S-Tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- close buffer
         ["<Leader>bd"] = {

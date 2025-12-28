@@ -21,18 +21,20 @@ Import-Module z
 ###################### aliases #########################
 Set-Alias clg clang
 Set-Alias cl+ clang++
+Set-Alias gnv neovide
 Set-Alias s scoop
 Set-Alias v nvim
-Set-Alias gnv neovide
 Set-Alias y yarn
 
 ###################### functions #########################
 function .. { Set-Location .. }
 function et { exit }
+function ll { lsd -la }
 #### git ####
 function cma { git commit --amend }
 function cmt { git commit -m @args }
 function gst { git status }
+function gsw { git switch @args}
 function gpr { git config --global http.proxy localhost:7890 }
 function gupr { git config --global --unset http.proxy }
 function gcl {
